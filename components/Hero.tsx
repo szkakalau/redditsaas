@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CALENDLY_URL } from "@/lib/constants";
+import { getAuditMailtoHref, getOptionalFormUrl } from "@/lib/constants";
 
 const metrics = [
   "120k+ views",
@@ -9,6 +9,8 @@ const metrics = [
 ];
 
 export default function Hero() {
+  const formUrl = getOptionalFormUrl();
+
   return (
     <section className="py-24">
       <div className="mx-auto grid max-w-[1100px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
@@ -20,14 +22,16 @@ export default function Hero() {
             We plan content, post, engage, and turn Reddit into a consistent lead
             channel for your startup.
           </p>
+          <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
+            Request a free audit by email—written English is fine. We reply within
+            24–48 hours. No video call required.
+          </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={getAuditMailtoHref()}
               className="inline-flex items-center justify-center rounded-xl bg-[#6366F1] px-6 py-3.5 text-center text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#5558E3] hover:shadow-xl"
             >
-              Book Free Reddit Audit
+              Request Free Reddit Audit
             </a>
             <Link
               href="#case-study"
@@ -36,6 +40,19 @@ export default function Hero() {
               See Case Studies
             </Link>
           </div>
+          {formUrl ? (
+            <p className="mt-3 text-sm text-[#6B7280]">
+              <a
+                href={formUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-[#6366F1] underline-offset-4 hover:underline"
+              >
+                Prefer a form?
+              </a>{" "}
+              (same request, no email client needed)
+            </p>
+          ) : null}
         </div>
         <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-xl shadow-gray-200/50 ring-1 ring-gray-100">
           <div className="flex items-center justify-between border-b border-gray-100 pb-4">

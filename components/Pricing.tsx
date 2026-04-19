@@ -1,4 +1,4 @@
-import { CALENDLY_URL } from "@/lib/constants";
+import { getAuditMailtoHref } from "@/lib/constants";
 
 const tiers = [
   {
@@ -45,8 +45,8 @@ export default function Pricing() {
           Pricing
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-[#6B7280]">
-          Pick a plan that matches your stage. Every plan starts with a free audit
-          to align on goals and constraints.
+          Pick a plan that matches your stage. Start with a free async audit by
+          email—we align on goals before you commit.
         </p>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {tiers.map((tier) => (
@@ -82,12 +82,10 @@ export default function Pricing() {
                 ))}
               </ul>
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={getAuditMailtoHref()}
                 className="mt-8 inline-flex items-center justify-center rounded-xl bg-[#6366F1] px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#5558E3] hover:shadow-lg"
               >
-                Book on Calendly
+                Get started via email
               </a>
             </div>
           ))}

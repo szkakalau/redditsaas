@@ -1,6 +1,6 @@
 # Reddit Growth Engine — Landing
 
-单页落地站：Next.js 14（App Router）+ Tailwind CSS，用于 Reddit 投流与预约咨询（Calendly）。
+单页落地站：Next.js 14（App Router）+ Tailwind CSS，用于 Reddit 投流；线索以 **邮件（mailto）** 为主，可选第三方表单，无后端。
 
 ## 本地开发
 
@@ -18,15 +18,12 @@ npm run build
 npm start
 ```
 
-## 接入 Calendly（3 步）
+## 配置联系邮箱与表单
 
-1. 登录 [calendly.com](https://calendly.com)，在预约类型旁点 **复制链接**，得到一串以 `https://calendly.com/...` 开头的地址。
-2. 用编辑器打开 [`lib/constants.ts`](lib/constants.ts)，找到 `REPLACE_ME`，把 `https://calendly.com/REPLACE_ME` **整段换成**你复制的地址，保存。
-3. 若网站已部署在 Vercel：把修改 **push 到 GitHub**，等它自动重新上线即可。
+1. **邮箱**：编辑 [`lib/constants.ts`](lib/constants.ts) 里的默认 `contact@email.com`（`CONTACT_EMAIL`），或在本机 / Vercel 设置环境变量 `NEXT_PUBLIC_CONTACT_EMAIL`（会覆盖默认）。页脚与所有「Request audit」按钮共用该地址。
+2. **（可选）表单**：在 Formspree、Tally 等创建表单后，把公开提交 URL 设为 `NEXT_PUBLIC_FORM_URL`，Hero 区会多一个 **Prefer a form?** 链接。详见 [`.env.example`](.env.example)。
 
-（可选）不想改代码时可在根目录建 `.env.local`，写一行 `NEXT_PUBLIC_CALENDLY_URL=你的链接`；有环境变量时优先用它。详见 [`.env.example`](.env.example)。
-
-其他：页脚邮箱 → [`components/Footer.tsx`](components/Footer.tsx)。
+审计请求通过 **mailto** 预填主题与正文；无需 Calendly。
 
 ## 部署
 

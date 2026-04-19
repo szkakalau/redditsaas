@@ -1,4 +1,18 @@
-// 只改下面引号里的网址：换成你在 Calendly 复制的预约链接（全站按钮共用）
-export const CALENDLY_URL =
-  process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ||
-  "https://calendly.com/REPLACE_ME";
+/** Public inbox for leads (override via NEXT_PUBLIC_CONTACT_EMAIL on Vercel). */
+export const CONTACT_EMAIL =
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "contact@email.com";
+
+/** Optional: Formspree / Tally / Google Forms URL — if set, Hero shows “Prefer a form?” */
+export function getOptionalFormUrl(): string | undefined {
+  const u = process.env.NEXT_PUBLIC_FORM_URL?.trim();
+  return u || undefined;
+}
+
+/** mailto: link with prefilled subject + body for audit requests */
+export function getAuditMailtoHref(): string {
+  const subject = encodeURIComponent("Reddit Growth — Free audit request");
+  const body = encodeURIComponent(
+    "Hi,\r\n\r\nI'd like a free Reddit growth audit.\r\n\r\nStartup / product:\r\nTarget subreddits or niche (if any):\r\n"
+  );
+  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+}

@@ -4,6 +4,14 @@ import { useState } from "react";
 
 const faqs = [
   {
+    q: "Do I need a video call or fluent spoken English?",
+    a: "No. We start with email (or an optional form if we provide one). Written English is enough—we reply in English within 24–48 hours on business days. Calls are optional and only if you want them later.",
+  },
+  {
+    q: "How do I request a free audit?",
+    a: "Use any “Request audit” button—it opens an email with a short template. Tell us about your product and niche; we send back a written take on Reddit fit, risks, and next steps.",
+  },
+  {
     q: "Is Reddit marketing allowed?",
     a: "Yes—when it’s done natively. Reddit’s policies and individual subreddit rules generally allow helpful, transparent participation. We avoid spam, misleading claims, and vote manipulation, and we tailor execution to each community’s guidelines so your brand stays compliant and credible.",
   },

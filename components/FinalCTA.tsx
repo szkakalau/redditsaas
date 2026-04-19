@@ -1,4 +1,4 @@
-import { CALENDLY_URL } from "@/lib/constants";
+import { getAuditMailtoHref } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
@@ -8,16 +8,14 @@ export default function FinalCTA() {
           Turn Reddit into your growth channel
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-indigo-100">
-          Book a short audit. We&apos;ll review fit, risk, and a practical 30-day
-          plan—no fluff.
+          Email us for a free written audit—we&apos;ll review fit, risk, and a
+          practical 30-day plan. Async only; no call required unless you ask.
         </p>
         <a
-          href={CALENDLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={getAuditMailtoHref()}
           className="mt-10 inline-flex items-center justify-center rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-[#4f46e5] shadow-lg transition hover:-translate-y-0.5 hover:bg-indigo-50 hover:shadow-xl"
         >
-          Book a Free Reddit Audit
+          Request a Free Reddit Audit
         </a>
       </div>
     </section>

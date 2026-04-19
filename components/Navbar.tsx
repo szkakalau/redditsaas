@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CALENDLY_URL } from "@/lib/constants";
+import { getAuditMailtoHref } from "@/lib/constants";
 
 export default function Navbar() {
   return (
@@ -28,12 +28,10 @@ export default function Navbar() {
             Pricing
           </Link>
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={getAuditMailtoHref()}
             className="inline-flex items-center justify-center rounded-xl bg-[#6366F1] px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#5558E3] hover:shadow-lg"
           >
-            Book Audit
+            Request Audit
           </a>
         </div>
       </nav>
