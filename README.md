@@ -25,7 +25,17 @@ npm start
 
 ## 部署
 
-推荐 [Vercel](https://vercel.com)：连接本仓库，Framework Preset 选 Next.js 即可。
+推荐 [Vercel](https://vercel.com) 导入本 GitHub 仓库，按下面设置：
+
+| 项 | 值 |
+|----|-----|
+| Framework Preset | **Next.js**（自动检测即可） |
+| Root Directory | **`.`**（留空或填 `./`，不要选子目录） |
+| Build Command | 默认 `next build` |
+| Output Directory | 留空（由 Next 插件处理） |
+| Install Command | 默认 `npm install`（仓库根目录须有 `package-lock.json`） |
+
+若构建失败：在 Vercel 项目 **Deployments → 失败那条 → Building** 里展开日志，查看红色报错（常见为 Root Directory 指错、或 Node 版本过旧）。本项目要求 **Node ≥ 18.17**（见 `package.json` 的 `engines`）。
 
 ## 技术栈
 

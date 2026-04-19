@@ -5,13 +5,21 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "./globals.css";
 
-const siteUrl =
-  process.env.VERCEL_URL != null
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+/** Safe absolute URL for metadata (Vercel may expose empty or odd VERCEL_URL during some build steps). */
+function getMetadataBase(): URL {
+  const raw = process.env.VERCEL_URL?.trim();
+  if (!raw) {
+    return new URL("http://localhost:3000");
+  }
+  const host = raw.replace(/^https?:\/\//i, "").replace(/\/$/, "");
+  if (!host) {
+    return new URL("http://localhost:3000");
+  }
+  return new URL(`https://${host}`);
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: getMetadataBase(),
   title: "Reddit Marketing Agency for Startups | Reddit Growth Engine",
   description:
     "We help startups get their first customers from Reddit using native content and engagement.",
