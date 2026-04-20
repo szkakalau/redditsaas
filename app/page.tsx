@@ -10,10 +10,11 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-[calc(5.25rem+env(safe-area-inset-bottom,0px))] md:pb-0">
       <Navbar />
       <Hero />
       <SocialProof />
@@ -26,6 +27,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <MobileStickyCTA />
     </main>
   );
 }

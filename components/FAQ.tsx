@@ -33,32 +33,32 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="border-t border-gray-100 bg-gray-50/50 py-24">
-      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-bold tracking-tight text-[#0B0F19] sm:text-4xl">
+    <section className="border-t border-gray-100 bg-gray-50/50 py-14 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-content px-5 sm:px-6">
+        <h2 className="text-center font-display text-2xl font-semibold tracking-tight text-[#0B0F19] sm:text-3xl lg:text-4xl">
           FAQ
         </h2>
-        <div className="mx-auto mt-12 max-w-3xl divide-y divide-gray-200 rounded-2xl border border-gray-100 bg-white shadow-md">
+        <div className="mx-auto mt-10 max-w-3xl divide-y divide-gray-200 rounded-2xl border border-gray-100 bg-white shadow-md sm:mt-12">
           {faqs.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={item.q} className="px-5 py-1">
+              <div key={item.q} className="px-1 sm:px-2">
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 py-4 text-left text-base font-semibold text-[#0B0F19] transition hover:text-[#6366F1]"
+                  className="flex min-h-[56px] w-full items-center justify-between gap-4 px-4 py-4 text-left text-base font-semibold leading-snug text-[#0B0F19] transition hover:text-[#6366F1] active:bg-gray-50/80 sm:min-h-[52px] sm:px-5 sm:text-[17px]"
                   aria-expanded={isOpen}
                 >
-                  {item.q}
+                  <span className="pr-2">{item.q}</span>
                   <span
-                    className="text-xl font-light text-[#6B7280] transition"
+                    className="shrink-0 text-2xl font-light leading-none text-[#6B7280]"
                     aria-hidden
                   >
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
                 {isOpen ? (
-                  <p className="pb-4 text-sm leading-relaxed text-[#6B7280]">
+                  <p className="px-4 pb-5 text-base leading-relaxed text-[#6B7280] sm:px-5">
                     {item.a}
                   </p>
                 ) : null}

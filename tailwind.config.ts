@@ -16,10 +16,20 @@ const config: Config = {
         muted: "#6B7280",
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-dm-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: [
+          "var(--font-fraunces)",
+          "Georgia",
+          "ui-serif",
+          "serif",
+        ],
       },
       maxWidth: {
         content: "1100px",
+      },
+      spacing: {
+        "safe-bottom": "env(safe-area-inset-bottom, 0px)",
+        "safe-top": "env(safe-area-inset-top, 0px)",
       },
     },
   },

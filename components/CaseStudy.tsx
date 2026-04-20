@@ -1,46 +1,92 @@
+import Image from "next/image";
+
+const shots = [
+  {
+    src: "/screenshots/redditsaas_01.jpg",
+    width: 785,
+    height: 509,
+    alt: "Reddit SaaS case study — campaign overview and reach",
+    step: "01",
+    caption: "Reach & posting cadence — first 30 days",
+  },
+  {
+    src: "/screenshots/redditsaas_02.jpg",
+    width: 772,
+    height: 704,
+    alt: "Reddit SaaS case study — engagement and conversion signals",
+    step: "02",
+    caption: "Engagement rolling up into pipeline signals",
+  },
+] as const;
+
 export default function CaseStudy() {
   return (
-    <section id="case-study" className="border-t border-gray-100 bg-gray-50/50 py-24">
-      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-[#0B0F19] sm:text-4xl">
+    <section
+      id="case-study"
+      className="scroll-mt-24 border-t border-gray-100 bg-[radial-gradient(ellipse_90%_45%_at_50%_-15%,rgba(99,102,241,0.07),transparent)] py-14 sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-content px-5 sm:px-6">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="order-2 lg:order-1 lg:sticky lg:top-28">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+              Proof
+            </p>
+            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-[#0B0F19] sm:text-3xl lg:text-4xl">
               Case Study: AI SaaS
             </h2>
-            <ul className="mt-8 space-y-4 text-[#6B7280]">
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6366F1]" />
+            <p className="mt-4 max-w-md text-base leading-relaxed text-[#6B7280]">
+              Real numbers from a focused Reddit experiment — content, consistency,
+              and conversion in one lane.
+            </p>
+            <ul className="mt-8 space-y-4 text-base text-[#6B7280]">
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
                 30 days experiment
               </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6366F1]" />
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
                 18 posts published
               </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6366F1]" />
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
                 120k+ total views
               </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#6366F1]" />
+              <li className="flex items-center gap-3">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
                 First paying customers acquired
               </li>
             </ul>
           </div>
-          <div
-            className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-[#6366F1]/15 via-white to-[#0B0F19]/10 shadow-xl ring-1 ring-gray-100"
-            role="img"
-            aria-label="Product analytics screenshot placeholder"
-          >
-            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(99,102,241,0.12),transparent_40%,rgba(11,15,25,0.08))]" />
-            <div className="absolute left-6 right-6 top-6 h-8 rounded-lg bg-white/80 shadow-sm ring-1 ring-gray-100" />
-            <div className="absolute bottom-8 left-6 right-6 space-y-3">
-              <div className="h-3 max-w-[60%] rounded-full bg-[#0B0F19]/10" />
-              <div className="h-3 max-w-[40%] rounded-full bg-[#6366F1]/25" />
-              <div className="h-3 max-w-[75%] rounded-full bg-gray-200/80" />
-            </div>
-            <p className="absolute bottom-4 left-0 right-0 text-center text-xs font-medium text-[#6B7280]">
-              Screenshot placeholder — analytics overview
-            </p>
+
+          <div className="order-1 flex flex-col gap-6 lg:order-2 lg:gap-8">
+            {shots.map((shot, i) => (
+              <figure key={shot.src} className="group relative">
+                <div className="relative overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-[0_22px_50px_-14px_rgba(15,23,42,0.18)] ring-1 ring-black/[0.04] transition duration-300 hover:border-[#6366F1]/25 hover:shadow-[0_28px_60px_-16px_rgba(99,102,241,0.22)]">
+                  <span
+                    className="absolute left-3 top-3 z-10 inline-flex h-9 min-w-[2.25rem] items-center justify-center rounded-full bg-[#0B0F19]/80 px-2.5 text-xs font-bold tabular-nums text-white shadow-md backdrop-blur-sm ring-1 ring-white/15 sm:left-4 sm:top-4"
+                    aria-hidden
+                  >
+                    {shot.step}
+                  </span>
+                  <div
+                    className="absolute inset-x-0 top-0 z-[1] h-px bg-gradient-to-r from-transparent via-[#6366F1]/35 to-transparent opacity-80"
+                    aria-hidden
+                  />
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={shot.width}
+                    height={shot.height}
+                    sizes="(max-width: 1024px) 92vw, 524px"
+                    className="h-auto w-full"
+                    priority={i === 0}
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm leading-snug text-[#6B7280] sm:text-base">
+                  {shot.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </div>
