@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getAuditMailtoHref, getOptionalFormUrl } from "@/lib/constants";
+import { getOptionalFormUrl } from "@/lib/constants";
+import AuditLink from "@/components/AuditLink";
 
 const metrics = [
   "120k+ views",
@@ -27,12 +28,11 @@ export default function Hero() {
             24–48 hours. No video call required.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
-            <a
-              href={getAuditMailtoHref()}
+            <AuditLink
               className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl bg-[#6366F1] px-6 text-center text-base font-semibold text-white shadow-lg transition active:scale-[0.99] hover:bg-[#5558E3] hover:shadow-xl sm:min-h-[48px] sm:flex-initial sm:px-8"
             >
               Request Free Reddit Audit
-            </a>
+            </AuditLink>
             <Link
               href="#case-study"
               className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl border border-gray-200 bg-white px-6 text-center text-base font-semibold text-[#0B0F19] shadow-sm transition active:scale-[0.99] hover:border-gray-300 hover:shadow-md sm:min-h-[48px] sm:flex-initial"

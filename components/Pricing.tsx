@@ -1,4 +1,4 @@
-import { getAuditMailtoHref } from "@/lib/constants";
+import AuditLink from "@/components/AuditLink";
 
 const tiers = [
   {
@@ -87,12 +87,11 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={getAuditMailtoHref()}
+                <AuditLink
                   className="mt-8 inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-[#6366F1] px-4 text-base font-semibold text-white shadow-md transition active:scale-[0.99] hover:bg-[#5558E3] hover:shadow-lg sm:min-h-[48px] sm:text-sm"
                 >
                   Get started via email
-                </a>
+                </AuditLink>
               </div>
             ))}
           </div>

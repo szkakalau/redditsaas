@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getAuditMailtoHref } from "@/lib/constants";
+import AuditLink from "@/components/AuditLink";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -45,12 +45,11 @@ export default function Navbar() {
           >
             Pricing
           </Link>
-          <a
-            href={getAuditMailtoHref()}
+          <AuditLink
             className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl bg-[#6366F1] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition active:scale-[0.98] hover:bg-[#5558E3] hover:shadow-lg"
           >
             Request Audit
-          </a>
+          </AuditLink>
         </div>
 
         <button
@@ -110,13 +109,12 @@ export default function Navbar() {
             >
               Pricing
             </Link>
-            <a
-              href={getAuditMailtoHref()}
+            <AuditLink
               className="mt-4 flex min-h-[52px] items-center justify-center rounded-xl bg-[#6366F1] px-4 text-base font-semibold text-white shadow-lg active:scale-[0.99]"
               onClick={() => setOpen(false)}
             >
               Request Audit
-            </a>
+            </AuditLink>
           </div>
         </div>
       ) : null}

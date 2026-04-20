@@ -1,4 +1,4 @@
-import { getAuditMailtoHref } from "@/lib/constants";
+import AuditLink from "@/components/AuditLink";
 
 export default function FinalCTA() {
   return (
@@ -15,12 +15,11 @@ export default function FinalCTA() {
           Email us for a free written audit—we&apos;ll review fit, risk, and a
           practical 30-day plan. Async only; no call required unless you ask.
         </p>
-        <a
-          href={getAuditMailtoHref()}
+        <AuditLink
           className="mt-8 inline-flex min-h-[52px] min-w-[min(100%,18rem)] items-center justify-center rounded-2xl bg-white px-8 text-base font-semibold text-[#312e81] shadow-lg transition active:scale-[0.99] hover:bg-indigo-50 hover:shadow-xl sm:mt-10 sm:min-h-[48px]"
         >
           Request a Free Reddit Audit
-        </a>
+        </AuditLink>
       </div>
     </section>
   );

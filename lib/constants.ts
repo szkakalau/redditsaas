@@ -11,8 +11,6 @@ export function getOptionalFormUrl(): string | undefined {
 /** mailto: link with prefilled subject + body for audit requests */
 export function getAuditMailtoHref(): string {
   const subject = encodeURIComponent("Reddit Growth — Free audit request");
-  const body = encodeURIComponent(
-    "Hi,\r\n\r\nI'd like a free Reddit growth audit.\r\n\r\nStartup / product:\r\nTarget subreddits or niche (if any):\r\n"
-  );
-  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  // Keep mailto minimal for maximum compatibility across mobile/in-app browsers.
+  return `mailto:${CONTACT_EMAIL}?subject=${subject}`;
 }
