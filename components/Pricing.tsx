@@ -53,16 +53,12 @@ export default function Pricing() {
         </p>
 
         <div className="mt-10 lg:mt-14">
-          <div
-            className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 pl-5 pr-5 pt-2 scrollbar-hide sm:pl-6 sm:pr-6 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:pb-0 lg:pl-0 lg:pr-0 lg:pt-0"
-            role="list"
-            aria-label="Pricing plans"
-          >
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3" role="list" aria-label="Pricing plans">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
                 role="listitem"
-                className={`relative flex min-h-full w-[min(100%,20rem)] shrink-0 snap-center flex-col rounded-2xl border bg-white p-5 shadow-md sm:w-[min(100%,22rem)] sm:p-6 lg:w-auto ${
+                className={`relative flex flex-col rounded-2xl border bg-white p-5 shadow-md sm:p-6 ${
                   tier.featured
                     ? "border-[#6366F1] ring-2 ring-[#6366F1]/20"
                     : "border-gray-100"
@@ -100,9 +96,6 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-          <p className="mt-3 text-center text-xs text-[#9CA3AF] lg:hidden">
-            Swipe for more plans
-          </p>
         </div>
       </div>
     </section>
