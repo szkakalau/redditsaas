@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -55,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${fraunces.variable}`}>
       <body className="touch-manipulation overflow-x-hidden bg-white font-sans text-[#6B7280] antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
