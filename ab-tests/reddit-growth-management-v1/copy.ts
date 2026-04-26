@@ -261,6 +261,18 @@ export const PLAYBOOK = {
     "We’ll email the PDF to you. If you don’t see it, check Promotions/Spam or reply back and we’ll resend.",
 } as const;
 
+export const EXEC_KIT = {
+  eyebrow: "Internal approval kit",
+  title: "Executive Briefing Kit (1-page + templates)",
+  subtitle:
+    "Need to pitch this internally? Get a concise PDF summary + ROI framing + risk notes you can forward to your CEO/CFO.",
+  privacyNote: "One kit. No spam. If it’s not useful, ignore it.",
+  cta: "Send me the kit",
+  successTitle: "Sent — you’ll receive it by email.",
+  successSubtitle:
+    "We’ll email the kit shortly. If you don’t see it, check Promotions/Spam or reply and we’ll resend.",
+} as const;
+
 export const TESTIMONIALS = [
   {
     name: "Maya Chen",

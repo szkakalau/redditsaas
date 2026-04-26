@@ -31,22 +31,26 @@ function buildMailto({
   to,
   leadEmail,
   source,
+  subjectText,
+  introLine,
 }: {
   to: string;
   leadEmail: string;
   source: string;
+  subjectText: string;
+  introLine: string;
 }) {
-  const subject = encodeURIComponent("Playbook request — Reddit Growth Engine");
+  const subject = encodeURIComponent(subjectText);
   const body = encodeURIComponent(
     [
-      "New Playbook request",
+      introLine,
       "",
       `Lead email: ${leadEmail}`,
       `Source: ${source}`,
       `Page: ${typeof window !== "undefined" ? window.location.href : source}`,
       `Time: ${new Date().toISOString()}`,
       "",
-      "Next step: reply with the PDF.",
+      "Next step: reply with the requested kit/PDF.",
     ].join("\n")
   );
   return `mailto:${to}?subject=${subject}&body=${body}`;
@@ -54,10 +58,16 @@ function buildMailto({
 
 export default function PlaybookLeadMagnet({
   copy,
+  id = "playbook",
+  mailtoSubject = "Playbook request — Reddit Growth Engine",
+  mailtoIntroLine = "New Playbook request",
   source = "reddit-growth-management",
   className,
 }: {
   copy: Copy;
+  id?: string;
+  mailtoSubject?: string;
+  mailtoIntroLine?: string;
   source?: string;
   className?: string;
 }) {
@@ -82,16 +92,18 @@ export default function PlaybookLeadMagnet({
           to: CONTACT_EMAIL,
           leadEmail: email.trim(),
           source,
+          subjectText: mailtoSubject,
+          introLine: mailtoIntroLine,
         });
       } catch {
         // no-op
       }
     },
-    [canSubmit, email, source]
+    [canSubmit, email, mailtoIntroLine, mailtoSubject, source]
   );
 
   return (
-    <section id="playbook" className={className}>
+    <section id={id} className={className}>
       <div className="rounded-3xl border border-gray-200/80 bg-white/90 p-5 shadow-[0_26px_70px_-34px_rgba(15,23,42,0.35)] ring-1 ring-black/[0.04] backdrop-blur-sm sm:p-7">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
@@ -157,7 +169,7 @@ export default function PlaybookLeadMagnet({
               <a
                 className="font-semibold text-[#0B0F19] underline decoration-gray-300 underline-offset-4 hover:decoration-gray-400"
                 href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-                  "Playbook request — Reddit Growth Engine"
+                  mailtoSubject
                 )}`}
               >
                 {CONTACT_EMAIL}
