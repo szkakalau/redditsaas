@@ -1,5 +1,6 @@
 import Image from "next/image";
 import StrategyCallLink from "@/components/StrategyCallLink";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 const shots = [
   {
@@ -125,14 +126,30 @@ export default function CaseStudy() {
                 Verify this case study
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
-                Links are available on the audit call (some clients prefer to stay private).
+                We don’t publish raw links publicly by default (client privacy + subreddit policy
+                sensitivity). On the audit call, we can share a verification pack that includes:
               </p>
+              <ul className="mt-3 space-y-2 text-sm text-[#0B0F19]">
+                {[
+                  "Direct links to the original Reddit posts",
+                  "Screenshot-to-link mapping for every metric shown",
+                  "The posting + engagement timeline we followed",
+                  "A redacted version if the client needs confidentiality",
+                ].map((b) => (
+                  <li key={b} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" aria-hidden />
+                    <span className="leading-snug">{b}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 <a
-                  href="#pricing"
+                  href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+                    "Verification pack request — Reddit Growth Engine"
+                  )}`}
                   className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-4 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
                 >
-                  See plans
+                  Request verification pack
                 </a>
                 <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
                   Book the audit call
