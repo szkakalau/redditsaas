@@ -95,8 +95,7 @@ export default function CaseStudy() {
                     not assumptions.
                   </p>
                   <p className="mt-2 text-xs">
-                    Results vary by market, offer, and execution. Metrics shown here are from a
-                    single case study and aren’t guaranteed.
+                    Individual results vary. This is one case study.
                   </p>
                 </div>
               </div>

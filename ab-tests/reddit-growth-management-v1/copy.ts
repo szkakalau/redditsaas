@@ -166,7 +166,7 @@ export const DELIVERABLES = [
   {
     title: "High-performing post writing",
     value: "Native content that sparks discussion (not ads).",
-    proof: "Optimized for trust + upvote ratio (typical).",
+    proof: "Optimized for trust + upvote ratio.",
   },
   {
     title: "Daily engagement & comment strategy",
@@ -317,7 +317,7 @@ export const WHY_US = {
         "Human-led, community-first execution",
         "Rule checks + safe warm-up",
         "Native writing + daily engagement",
-        "3–6 weeks to first traction (typical)",
+        "3–6 weeks to first traction",
       ],
       accent: "rge",
     },

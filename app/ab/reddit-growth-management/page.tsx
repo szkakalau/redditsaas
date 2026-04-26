@@ -238,18 +238,17 @@ export default function ABRedditGrowthManagement() {
                 No bots
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
-                0 client bans (typical)
+                Safety-first
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
                 Community-first
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
-                30+ startups served (to date)
+                30+ startups served
               </span>
             </div>
             <p className="mt-3 text-xs leading-relaxed text-[#6B7280]">
-              Results vary by offer, market, and execution. Any numbers shown are typical ranges
-              from past work and are not guaranteed.
+              Results depend on your market, offer, and execution. We’ll set expectations up front.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
@@ -326,10 +325,10 @@ export default function ABRedditGrowthManagement() {
               </p>
               <ul className="mt-4 space-y-2">
                 {[
-                  "500M+ monthly users (platform-wide)",
+                  "500M+ monthly users",
                   "4,000+ active communities across niches",
                   "Users search for solutions (not entertainment)",
-                  "Typical CAC lower than paid social (varies)",
+                  "Often lower CAC than paid social",
                 ].map((b) => (
                   <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
@@ -360,8 +359,7 @@ export default function ABRedditGrowthManagement() {
                 ))}
               </ul>
               <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                Numbers vary by market, offer, and execution. We optimize for safe, repeatable
-                loops — not hacks.
+                We optimize for safe, repeatable loops — not hacks.
               </p>
             </div>
           </div>
@@ -452,7 +450,7 @@ export default function ABRedditGrowthManagement() {
               30-day money-back guarantee* · Month-to-month · Community-first
             </p>
             <p className="mt-2 text-xs leading-relaxed text-[#6B7280]">
-              *Terms apply. Ask us on the call.
+              *Ask us on the call for details.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold text-[#0B0F19] sm:text-base">
               {PRICING_NOTES.anchor}
