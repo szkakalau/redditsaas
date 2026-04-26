@@ -16,9 +16,9 @@ const config: Config = {
         muted: "#6B7280",
       },
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["\"DM Sans\"", "ui-sans-serif", "system-ui", "sans-serif"],
         display: [
-          "var(--font-fraunces)",
+          "\"Fraunces\"",
           "Georgia",
           "ui-serif",
           "serif",
