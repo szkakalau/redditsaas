@@ -8,7 +8,7 @@ export function getOptionalFormUrl(): string | undefined {
   return u || undefined;
 }
 
-/** Optional: Booking link for strategy call (Calendly / Tally / etc). */
+/** Legacy: booking link (not used; email-first). */
 export function getStrategyCallUrl(): string | undefined {
   const u = process.env.NEXT_PUBLIC_STRATEGY_CALL_URL?.trim();
   return u || undefined;
@@ -22,6 +22,6 @@ export function getAuditMailtoHref(): string {
 }
 
 export function getStrategyCallMailtoHref(): string {
-  const subject = encodeURIComponent("Strategy call — Reddit growth");
+  const subject = encodeURIComponent("Reddit Growth — Email request");
   return `mailto:${CONTACT_EMAIL}?subject=${subject}`;
 }

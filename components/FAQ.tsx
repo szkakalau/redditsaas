@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Do I need a video call or fluent spoken English?",
-    a: "No. We start with email (or an optional form if we provide one). Written English is enough—we reply in English within 24–48 hours on business days. Calls are optional and only if you want them later.",
+    a: "No. We start with email (or an optional form if we provide one). Written English is enough—we reply within 24 hours on business days. No call required.",
   },
   {
     q: "How do I request a free audit?",

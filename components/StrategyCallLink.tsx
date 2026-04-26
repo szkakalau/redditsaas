@@ -3,8 +3,7 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import {
   CONTACT_EMAIL,
-  getStrategyCallMailtoHref,
-  getStrategyCallUrl,
+  getAuditMailtoHref,
 } from "@/lib/constants";
 
 type Props = Omit<
@@ -40,8 +39,8 @@ export default function StrategyCallLink({
   onClick,
   ...rest
 }: Props) {
-  const url = getStrategyCallUrl();
-  const href = useMemo(() => (url ? url : getStrategyCallMailtoHref()), [url]);
+  // Email-first business: always route to a mailto (no booking page / no call required).
+  const href = useMemo(() => getAuditMailtoHref(), []);
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const timerRef = useRef<number | null>(null);
@@ -75,7 +74,6 @@ export default function StrategyCallLink({
         className={className}
         onClick={handleClick}
         {...rest}
-        {...(url ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}
       </a>
@@ -85,11 +83,11 @@ export default function StrategyCallLink({
           <div className="w-full max-w-md rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
             <div className="p-5 sm:p-6">
               <p className="font-display text-lg font-semibold text-[#0B0F19]">
-                Can’t open the booking page?
+                Can’t open your email app?
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
-                Some mobile browsers block external opens. Copy our email and we’ll
-                schedule you manually.
+                Some in-app browsers block email opens. Copy our email and we’ll reply
+                within 24 hours.
               </p>
 
               <div className="mt-4 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">

@@ -60,7 +60,7 @@ export default function ROICalculator({
             </h3>
             <p className="mt-3 text-base leading-relaxed text-[#6B7280] sm:text-lg">
               Plug in your unit economics. We’ll estimate the revenue range from a lead range — then
-              validate the assumptions on the audit call.
+              validate the assumptions over email.
             </p>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -144,7 +144,7 @@ export default function ROICalculator({
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                  Book the audit call
+                  Email us for an async audit
                 </StrategyCallLink>
                 <a
                   href="#exec-kit"

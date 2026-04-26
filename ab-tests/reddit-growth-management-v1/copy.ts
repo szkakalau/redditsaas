@@ -259,7 +259,7 @@ export const PLAYBOOK = {
     "Day 0: Playbook delivered to your inbox",
     "Day 2: A case study deep-dive (how the loop works)",
     "Day 5: Common mistakes guide (what to avoid)",
-    "Day 8: Invite to a free audit call",
+    "Day 8: Invite to request a free async audit (email)",
   ],
   cta: "Send me the playbook",
   successTitle: "Got it — check your inbox soon.",

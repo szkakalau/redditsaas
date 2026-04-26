@@ -180,7 +180,7 @@ function PlanCard({ p }: { p: (typeof PLANS)[number] }) {
         <p className="mt-6 text-sm font-semibold text-[#0B0F19]">{p.outcome}</p>
 
         <StrategyCallLink className="mt-6 inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-base font-semibold text-white shadow-md transition active:scale-[0.99] hover:shadow-lg sm:min-h-[48px] sm:text-sm">
-          Book a free call
+          Email us
         </StrategyCallLink>
       </div>
     </div>
@@ -212,7 +212,7 @@ export default function ABRedditGrowthManagement() {
               Process
             </a>
             <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-[#0B0F19] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition active:scale-[0.98] hover:shadow-lg">
-              Book a free call
+              Email us
             </StrategyCallLink>
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function ABRedditGrowthManagement() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <StrategyCallLink className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-center text-base font-semibold text-white shadow-lg transition active:scale-[0.99] hover:shadow-xl sm:min-h-[48px] sm:flex-initial sm:px-8">
-                Book your free Reddit growth audit (30 min)
+                Request a free async audit (email)
               </StrategyCallLink>
               <a
                 href="#playbook"
@@ -521,11 +521,11 @@ export default function ABRedditGrowthManagement() {
                   ))}
                 </ul>
                 <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                  Full terms are reviewed on the audit call (takes ~5 minutes).
+                  Full terms are shared over email (takes ~5 minutes to read).
                 </p>
               </div>
               <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                Book the audit call
+                Email us
               </StrategyCallLink>
             </div>
           </div>
@@ -671,11 +671,11 @@ export default function ABRedditGrowthManagement() {
             Ready to turn Reddit into a growth engine?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-indigo-100/95 sm:text-lg">
-            Book a free call. We’ll map subreddits, risks, and a safe execution plan.
+            Email us. We’ll map subreddits, risks, and a safe execution plan — async.
           </p>
           <div className="mx-auto mt-8 grid max-w-xl gap-3 sm:mt-10 sm:grid-cols-2">
             <StrategyCallLink className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-white px-8 text-base font-semibold text-[#312e81] shadow-lg transition active:scale-[0.99] hover:bg-indigo-50 hover:shadow-xl sm:min-h-[48px] sm:text-sm">
-              Book a free call
+              Email us
             </StrategyCallLink>
             <a
               href="#playbook"
@@ -691,7 +691,7 @@ export default function ABRedditGrowthManagement() {
       <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
         <div className="border-t border-gray-200/90 bg-white/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-12px_40px_-8px_rgba(15,23,42,0.15)] backdrop-blur-md">
           <StrategyCallLink className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-[#0B0F19] text-center text-base font-semibold text-white shadow-md transition active:scale-[0.99]">
-            Book a free strategy call
+            Email us for a free audit
           </StrategyCallLink>
         </div>
       </div>

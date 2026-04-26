@@ -127,7 +127,7 @@ export default function CaseStudy() {
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
                 We don’t publish raw links publicly by default (client privacy + subreddit policy
-                sensitivity). On the audit call, we can share a verification pack that includes:
+                sensitivity). Over email, we can share a verification pack that includes:
               </p>
               <ul className="mt-3 space-y-2 text-sm text-[#0B0F19]">
                 {[
@@ -152,7 +152,7 @@ export default function CaseStudy() {
                   Request verification pack
                 </a>
                 <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                  Book the audit call
+                  Email us
                 </StrategyCallLink>
               </div>
             </div>

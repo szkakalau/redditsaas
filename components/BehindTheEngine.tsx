@@ -83,8 +83,8 @@ export default function BehindTheEngine({
         </div>
 
         <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-[#6B7280]">
-          We keep details high-level on the public page. On the audit call, we’ll share the exact workflow,
-          examples, and what we’d do in your market.
+          We keep details high-level on the public page. Over email, we’ll share the exact workflow, examples,
+          and what we’d do in your market.
         </p>
       </div>
     </section>
