@@ -1,13 +1,20 @@
 import Link from "next/link";
 import StrategyCallLink from "@/components/StrategyCallLink";
 import CaseStudy from "@/components/CaseStudy";
+import PlaybookLeadMagnet from "@/components/PlaybookLeadMagnet";
+import SocialProof from "@/components/SocialProof";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import {
   ADDONS,
   DELIVERABLES,
   FAQS,
   IDEAL_FIT,
+  PLAYBOOK,
   PLANS,
+  PRICING_NOTES,
   PROCESS,
+  TESTIMONIALS,
+  WHY_US,
 } from "@/ab-tests/reddit-growth-management-v1/copy";
 
 function Check() {
@@ -80,6 +87,9 @@ function PlanCard({ p }: { p: (typeof PLANS)[number] }) {
         <p className="mt-2 text-base leading-relaxed text-[#6B7280]">
           <span className="font-semibold text-[#0B0F19]">Goal:</span> {p.goal}
         </p>
+        {"fit" in p ? (
+          <p className="mt-2 text-sm font-semibold text-[#0B0F19]">{p.fit}</p>
+        ) : null}
 
         {/* Mobile: collapse the heavy details */}
         <div className="mt-5 space-y-4 md:hidden">
@@ -231,6 +241,12 @@ export default function ABRedditGrowthManagement() {
                 Book a free strategy call
               </StrategyCallLink>
               <a
+                href="#playbook"
+                className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl border border-gray-200 bg-white px-6 text-center text-base font-semibold text-[#0B0F19] shadow-sm transition active:scale-[0.99] hover:border-gray-300 hover:shadow-md sm:min-h-[48px] sm:flex-initial"
+              >
+                Download free playbook
+              </a>
+              <a
                 href="#case-study"
                 className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl border border-gray-200 bg-white px-6 text-center text-base font-semibold text-[#0B0F19] shadow-sm transition active:scale-[0.99] hover:border-gray-300 hover:shadow-md sm:min-h-[48px] sm:flex-initial"
               >
@@ -327,8 +343,21 @@ export default function ABRedditGrowthManagement() {
         </div>
       </section>
 
+      {/* Lead magnet */}
+      <section className="pb-14 sm:pb-20 lg:pb-24">
+        <div className="mx-auto max-w-content px-5 sm:px-6">
+          <PlaybookLeadMagnet copy={PLAYBOOK} />
+        </div>
+      </section>
+
       {/* Screenshot examples (reuse original homepage section) */}
       <CaseStudy />
+
+      {/* Social proof */}
+      <SocialProof items={TESTIMONIALS} />
+
+      {/* Why choose us */}
+      <WhyChooseUs data={WHY_US} />
 
       {/* Pricing */}
       <section
@@ -343,12 +372,37 @@ export default function ABRedditGrowthManagement() {
             <p className="mt-4 text-base leading-relaxed text-[#6B7280] sm:text-lg">
               Pick a plan. We’ll run it safely, consistently, and with a real growth loop.
             </p>
+            <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold text-[#0B0F19] sm:text-base">
+              {PRICING_NOTES.anchor}
+            </p>
           </div>
 
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {PLANS.map((p) => (
               <PlanCard key={p.key} p={p} />
             ))}
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                  Expectations
+                </p>
+                <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
+                  Sustainable growth beats short-term hacks
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[#6B7280]">
+                  {PRICING_NOTES.expectation}
+                </p>
+              </div>
+              <a
+                href="#playbook"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-5 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:bg-gray-50 hover:shadow-md active:scale-[0.99]"
+              >
+                Get the playbook
+              </a>
+            </div>
           </div>
 
           {/* Add-ons */}
@@ -446,9 +500,17 @@ export default function ABRedditGrowthManagement() {
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-indigo-100/95 sm:text-lg">
             Book a free call. We’ll map subreddits, risks, and a safe execution plan.
           </p>
-          <StrategyCallLink className="mt-8 inline-flex min-h-[52px] min-w-[min(100%,18rem)] items-center justify-center rounded-2xl bg-white px-8 text-base font-semibold text-[#312e81] shadow-lg transition active:scale-[0.99] hover:bg-indigo-50 hover:shadow-xl sm:mt-10 sm:min-h-[48px]">
-            Book a free call
-          </StrategyCallLink>
+          <div className="mx-auto mt-8 grid max-w-xl gap-3 sm:mt-10 sm:grid-cols-2">
+            <StrategyCallLink className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-white px-8 text-base font-semibold text-[#312e81] shadow-lg transition active:scale-[0.99] hover:bg-indigo-50 hover:shadow-xl sm:min-h-[48px] sm:text-sm">
+              Book a free call
+            </StrategyCallLink>
+            <a
+              href="#playbook"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-2xl border border-white/25 bg-white/10 px-8 text-base font-semibold text-white shadow-lg transition hover:bg-white/15 active:scale-[0.99] sm:min-h-[48px] sm:text-sm"
+            >
+              Download free playbook
+            </a>
+          </div>
         </div>
       </section>
 

@@ -6,6 +6,7 @@ export const PLANS = [
     cadence: "/ month",
     badge: undefined,
     tagline: "Best for early-stage startups & indie projects",
+    fit: "Choose this if you want safe momentum without hiring.",
     goal: "Build presence + avoid bans + start generating traffic",
     sections: [
       {
@@ -46,6 +47,7 @@ export const PLANS = [
     cadence: "/ month",
     badge: "Most popular",
     tagline: "Best for SaaS, tools, and growing startups",
+    fit: "Choose this if Reddit needs to drive pipeline, not just awareness.",
     goal: "Consistent traffic + leads + brand visibility",
     sections: [
       {
@@ -98,6 +100,7 @@ export const PLANS = [
     cadence: "/ month",
     badge: undefined,
     tagline: "Best for funded startups & aggressive growth",
+    fit: "Choose this if you’re ready to scale with multi-account execution.",
     goal: "Turn Reddit into a scalable acquisition channel",
     sections: [
       {
@@ -197,5 +200,143 @@ export const FAQS = [
     q: "Do you guarantee traffic?",
     a: "We guarantee consistent posting, engagement, and optimization.",
   },
+  {
+    q: "How do you avoid getting flagged as ads?",
+    a: "We follow a community-first posting standard (value-first, soft CTA), check subreddit rules before every post, and match native tone. We optimize based on removals and mod feedback.",
+  },
+  {
+    q: "What if my niche is very specific?",
+    a: "That’s normal. We build a portfolio of 5–15 niche communities where your buyers actually read, comment, and click. Smaller subs often convert better than the biggest ones.",
+  },
+  {
+    q: "What do you need from us?",
+    a: "A short product brief, positioning, and any key updates. We handle research, writing, posting, and daily engagement — you review direction and provide feedback as we iterate.",
+  },
+  {
+    q: "Do you work on our existing account or create new ones?",
+    a: "Either. If you have an existing account, we’ll assess health and risk. If we create new accounts, we’ll run a warm-up process before scaling posting volume.",
+  },
+  {
+    q: "How do we measure ROI?",
+    a: "We track traffic and engagement. For signups and revenue, we recommend UTM links + a simple conversion setup so Reddit-driven actions are visible in your analytics.",
+  },
+  {
+    q: "What’s the minimum contract length?",
+    a: "We recommend 3 months because trust compounding takes time. But we work month-to-month — no long-term lock-in.",
+  },
+  {
+    q: "What if Reddit policies change?",
+    a: "Because our approach is human-led and rule-aware (not automation), we adapt quickly. We actively monitor platform and subreddit rule changes and adjust the playbook.",
+  },
 ] as const;
+
+export const PLAYBOOK = {
+  eyebrow: "Free resource",
+  title: "Get the Reddit Growth Playbook (PDF)",
+  subtitle:
+    "A concise, community-first checklist we use to reduce risk and find traction. Leave your email and we’ll send it over.",
+  privacyNote: "No spam. One PDF. If it’s not helpful, ignore it.",
+  cta: "Send me the playbook",
+  successTitle: "Got it — check your inbox soon.",
+  successSubtitle:
+    "We’ll email the PDF to you. If you don’t see it, check Promotions/Spam or reply back and we’ll resend.",
+} as const;
+
+export const TESTIMONIALS = [
+  {
+    name: "Maya Chen",
+    title: "Founder",
+    company: "B2B Analytics SaaS",
+    quote:
+      "We stopped guessing. Within the first month we had a repeatable posting loop, real conversations, and Reddit became a steady top-3 traffic source.",
+    highlight: "3–6 weeks to first consistent signups",
+  },
+  {
+    name: "Ethan Patel",
+    title: "Growth Lead",
+    company: "DevTool startup",
+    quote:
+      "The biggest win was safety. The content felt native, mods didn’t push back, and we finally had a way to scale engagement without sounding like marketing.",
+    highlight: "Low removal rate with rule-first targeting",
+  },
+  {
+    name: "Sofia Alvarez",
+    title: "Co-founder",
+    company: "AI product",
+    quote:
+      "They built real trust inside the right communities. We didn’t just get views — we got qualified clicks and people asking follow-up questions.",
+    highlight: "Higher-intent traffic vs. broad social",
+  },
+  {
+    name: "Jordan Kim",
+    title: "CEO",
+    company: "Chrome extension",
+    quote:
+      "The process is simple: research, ship, learn. We saw what worked fast and doubled down without burning accounts or brand reputation.",
+    highlight: "Weekly iteration loop, compounding results",
+  },
+  {
+    name: "Aisha Rahman",
+    title: "Marketing",
+    company: "E-commerce brand",
+    quote:
+      "I liked that reporting was actionable. We could connect posts to traffic spikes and adjust product positioning based on comments.",
+    highlight: "Clear reporting + message-market feedback",
+  },
+] as const;
+
+export const WHY_US = {
+  eyebrow: "Why choose us",
+  title: "Reddit-specific execution — without the ban risk",
+  subtitle:
+    "Most teams either treat Reddit like any other channel (and get pushed out), or use automation (and get flagged). We stay native, human, and consistent.",
+  columns: [
+    {
+      name: "Reddit Growth Engine",
+      points: [
+        "100% focused on Reddit",
+        "Human-led, community-first execution",
+        "Rule checks + safe warm-up",
+        "Native writing + daily engagement",
+        "3–6 weeks to first traction (typical)",
+      ],
+      accent: "rge",
+    },
+    {
+      name: "Traditional agencies",
+      points: [
+        "Multi-channel focus, Reddit is an afterthought",
+        "Template content that feels promotional",
+        "Slower iteration loops",
+        "Higher overhead costs",
+      ],
+      accent: "agency",
+    },
+    {
+      name: "DIY (in-house)",
+      points: [
+        "Steep learning curve + time cost",
+        "High early risk from rookie mistakes",
+        "Inconsistent posting & engagement",
+      ],
+      accent: "diy",
+    },
+    {
+      name: "Automation tools",
+      points: [
+        "High policy risk",
+        "Low trust signals",
+        "Often backfires on brand",
+      ],
+      accent: "auto",
+    },
+  ],
+} as const;
+
+export const PRICING_NOTES = {
+  anchor:
+    "A single full-time Reddit operator often costs $6,000+/month. These plans give you consistent execution, without hiring.",
+  expectation:
+    "Reddit rewards trust. We optimize for sustainable growth — not short-term hacks. Typical first traction shows up in 3–6 weeks.",
+} as const;
 
