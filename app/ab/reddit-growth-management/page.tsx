@@ -4,6 +4,7 @@ import CaseStudy from "@/components/CaseStudy";
 import PlaybookLeadMagnet from "@/components/PlaybookLeadMagnet";
 import SocialProof from "@/components/SocialProof";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import { CONTACT_EMAIL } from "@/lib/constants";
 import {
   ADDONS,
   DELIVERABLES,
@@ -49,6 +50,14 @@ function Glow() {
       <div className="absolute -bottom-28 -right-24 h-[26rem] w-[26rem] rounded-full bg-[#0B0F19]/10 blur-3xl" />
       <div className="absolute left-1/2 top-[-10rem] h-[22rem] w-[36rem] -translate-x-1/2 rounded-full bg-[#A5B4FC]/18 blur-3xl" />
     </div>
+  );
+}
+
+function Arrow() {
+  return (
+    <span className="text-[#6B7280]" aria-hidden>
+      →
+    </span>
   );
 }
 
@@ -215,11 +224,11 @@ export default function ABRedditGrowthManagement() {
               Reddit Growth Management
             </p>
             <h1 className="mt-3 font-display text-pretty text-[1.85rem] font-semibold leading-[1.15] tracking-tight text-[#0B0F19] sm:text-4xl lg:text-[2.75rem]">
-              Turn Reddit into your highest-ROI growth channel
+              Turn Reddit into your #1 predictable acquisition channel
             </h1>
             <p className="mt-5 text-base leading-relaxed text-[#6B7280] sm:text-lg">
-              We help startups get traffic, users, and customers from Reddit — safely and
-              consistently.
+              We help B2B startups generate qualified leads from Reddit — without getting banned,
+              without spam, and without wasting months learning the hard way.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-sm font-semibold text-[#0B0F19]">
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
@@ -229,16 +238,23 @@ export default function ABRedditGrowthManagement() {
                 No bots
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
-                No bans
+                0 client bans (typical)
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
                 Community-first
               </span>
+              <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
+                30+ startups served (to date)
+              </span>
             </div>
+            <p className="mt-3 text-xs leading-relaxed text-[#6B7280]">
+              Results vary by offer, market, and execution. Any numbers shown are typical ranges
+              from past work and are not guaranteed.
+            </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <StrategyCallLink className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-center text-base font-semibold text-white shadow-lg transition active:scale-[0.99] hover:shadow-xl sm:min-h-[48px] sm:flex-initial sm:px-8">
-                Book a free strategy call
+                Book your free Reddit growth audit (30 min)
               </StrategyCallLink>
               <a
                 href="#playbook"
@@ -261,16 +277,25 @@ export default function ABRedditGrowthManagement() {
                 What you get
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
-                We don’t just post — we build trust inside communities.
+                We don’t just post — we build trust that converts.
               </p>
-              <ul className="mt-5 space-y-3">
+              <div className="mt-5 space-y-3">
                 {DELIVERABLES.map((d) => (
-                  <li key={d} className="flex gap-3 text-base text-[#0B0F19]">
-                    <Check />
-                    <span className="leading-snug">{d}</span>
-                  </li>
+                  <div key={d.title} className="rounded-2xl border border-gray-100 bg-gray-50/70 p-4">
+                    <p className="flex items-start justify-between gap-3 text-base font-semibold text-[#0B0F19]">
+                      <span className="leading-snug">{d.title}</span>
+                      <Check />
+                    </p>
+                    <p className="mt-2 flex gap-2 text-sm leading-relaxed text-[#6B7280]">
+                      <Arrow />
+                      <span>{d.value}</span>
+                    </p>
+                    {"proof" in d ? (
+                      <p className="mt-2 text-xs font-semibold text-[#0B0F19]">{d.proof}</p>
+                    ) : null}
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -291,6 +316,56 @@ export default function ABRedditGrowthManagement() {
             </p>
           </div>
 
+          <div className="mt-10 grid gap-4 sm:mt-12 lg:grid-cols-2 lg:gap-6">
+            <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-md sm:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                Opportunity
+              </p>
+              <p className="mt-2 font-display text-lg font-semibold text-[#0B0F19]">
+                High intent communities, still underpriced
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  "500M+ monthly users (platform-wide)",
+                  "4,000+ active communities across niches",
+                  "Users search for solutions (not entertainment)",
+                  "Typical CAC lower than paid social (varies)",
+                ].map((b) => (
+                  <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
+                    <span className="leading-snug">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-md sm:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                Why it’s hard
+              </p>
+              <p className="mt-2 font-display text-lg font-semibold text-[#0B0F19]">
+                Trust is earned — and mistakes compound
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  "New accounts often get removed early",
+                  "Many subreddits ban direct promotion",
+                  "Mods and users spot marketing instantly",
+                  "A single misstep can burn an account’s credibility",
+                ].map((b) => (
+                  <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0B0F19]" />
+                    <span className="leading-snug">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
+                Numbers vary by market, offer, and execution. We optimize for safe, repeatable
+                loops — not hacks.
+              </p>
+            </div>
+          </div>
+
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-6">
             {[
               "Accounts get banned easily",
@@ -307,7 +382,8 @@ export default function ABRedditGrowthManagement() {
           </div>
 
           <p className="mt-10 text-center font-display text-lg font-semibold text-[#0B0F19] sm:mt-12 sm:text-xl">
-            That’s where we come in. We specialize only in Reddit growth.
+            That’s where we come in. Human-led execution, rule-first targeting, and a steady
+            iteration loop.
           </p>
         </div>
       </section>
@@ -372,6 +448,12 @@ export default function ABRedditGrowthManagement() {
             <p className="mt-4 text-base leading-relaxed text-[#6B7280] sm:text-lg">
               Pick a plan. We’ll run it safely, consistently, and with a real growth loop.
             </p>
+            <p className="mt-5 text-sm font-semibold text-[#0B0F19]">
+              30-day money-back guarantee* · Month-to-month · Community-first
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-[#6B7280]">
+              *Terms apply. Ask us on the call.
+            </p>
             <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold text-[#0B0F19] sm:text-base">
               {PRICING_NOTES.anchor}
             </p>
@@ -428,6 +510,32 @@ export default function ABRedditGrowthManagement() {
                   <p className="mt-1 text-sm font-semibold text-[#6366F1]">{a.price}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Enterprise */}
+          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                  Enterprise
+                </p>
+                <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
+                  Custom plans for bigger teams
+                </p>
+                <p className="mt-3 text-base leading-relaxed text-[#6B7280]">
+                  Series A+ startups, multiple products, compliance needs, or a high-volume content
+                  engine — we’ll scope a custom plan.
+                </p>
+              </div>
+              <a
+                href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+                  "Enterprise — Reddit Growth Engine"
+                )}`}
+                className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]"
+              >
+                Contact us
+              </a>
             </div>
           </div>
         </div>

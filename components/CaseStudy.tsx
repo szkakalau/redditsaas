@@ -36,6 +36,71 @@ export default function CaseStudy() {
               Metrics pulled directly from the screenshots — trust signals and
               performance from consistent, community-first execution.
             </p>
+
+            <details className="mt-6 rounded-2xl border border-gray-200 bg-white/70 px-5 py-4 shadow-sm">
+              <summary className="cursor-pointer list-none text-sm font-semibold text-[#0B0F19]">
+                Full breakdown (strategy + execution)
+                <span className="ml-2 text-[#6366F1]">+</span>
+              </summary>
+              <div className="mt-4 space-y-5 text-sm leading-relaxed text-[#6B7280]">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    Background
+                  </p>
+                  <p className="mt-2">
+                    Seed-stage AI SaaS team looking for a predictable top-of-funnel channel without
+                    risking bans or brand damage.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    Strategy
+                  </p>
+                  <ul className="mt-2 space-y-2">
+                    {[
+                      "Persona-led accounts + warm-up before scaling posting volume",
+                      "Targeted subreddits where buyers already ask for solutions",
+                      "Value-first content with soft CTAs (native tone, rule-first)",
+                    ].map((b) => (
+                      <li key={b} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    Execution
+                  </p>
+                  <ul className="mt-2 space-y-2">
+                    {[
+                      "Week 1–2: daily engagement to establish trust signals",
+                      "Week 3–4: non-promotional posts to test formats",
+                      "Week 5+: double down on winners and improve conversion tracking",
+                    ].map((b) => (
+                      <li key={b} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    What made it work
+                  </p>
+                  <p className="mt-2">
+                    Patience on warm-up, strict rule checks, and iterating based on real comments —
+                    not assumptions.
+                  </p>
+                  <p className="mt-2 text-xs">
+                    Results vary by market, offer, and execution. Metrics shown here are from a
+                    single case study and aren’t guaranteed.
+                  </p>
+                </div>
+              </div>
+            </details>
             <ul className="mt-8 space-y-4 text-base text-[#6B7280]">
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />

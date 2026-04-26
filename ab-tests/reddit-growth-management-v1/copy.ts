@@ -155,12 +155,31 @@ export const ADDONS = [
 ] as const;
 
 export const DELIVERABLES = [
-  "Account warm-up & karma building",
-  "Subreddit research & targeting",
-  "High-performing post writing",
-  "Daily engagement & comment strategy",
-  "Viral content testing",
-  "Traffic & growth reporting",
+  {
+    title: "Account warm-up & karma building",
+    value: "Build instant credibility so your content gets seen.",
+  },
+  {
+    title: "Subreddit research & targeting",
+    value: "Reach high-intent communities where buyers already ask for solutions.",
+  },
+  {
+    title: "High-performing post writing",
+    value: "Native content that sparks discussion (not ads).",
+    proof: "Optimized for trust + upvote ratio (typical).",
+  },
+  {
+    title: "Daily engagement & comment strategy",
+    value: "Turn comments into relationships that convert into demos and sales.",
+  },
+  {
+    title: "Viral content testing",
+    value: "Systematically discover what resonates — no guesswork.",
+  },
+  {
+    title: "Traffic & growth reporting",
+    value: "Know what Reddit drives and what to iterate next.",
+  },
 ] as const;
 
 export const IDEAL_FIT = [
