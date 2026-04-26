@@ -376,6 +376,31 @@ export const WHY_US = {
   ],
 } as const;
 
+export const TEAM = [
+  {
+    name: "Reddit Growth Engine Team",
+    role: "Strategy + Execution",
+    bio: "We specialize in Reddit only. Our edge is process: rule-first targeting, native writing, and daily engagement that compounds trust.",
+    bullets: [
+      "Human-led posting (no bots, no automation spam)",
+      "Rule checks before every post",
+      "Warm-up before scaling volume",
+      "Weekly iteration based on real comments and removals",
+    ],
+  },
+  {
+    name: "Dedicated Strategist",
+    role: "Your point of contact",
+    bio: "You get a consistent operator who learns your product and market, then turns Reddit feedback into positioning and growth decisions.",
+    bullets: [
+      "Subreddit mapping + persona strategy",
+      "Content formats tailored to your niche",
+      "Clear reporting and next actions",
+      "Fast feedback loop with your team",
+    ],
+  },
+] as const;
+
 export const PRICING_NOTES = {
   anchor:
     "A single full-time Reddit operator often costs $6,000+/month. These plans give you consistent execution, without hiring.",

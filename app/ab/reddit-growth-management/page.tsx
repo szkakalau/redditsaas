@@ -5,6 +5,7 @@ import PlaybookLeadMagnet from "@/components/PlaybookLeadMagnet";
 import ROICalculator from "@/components/ROICalculator";
 import SocialProof from "@/components/SocialProof";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import BehindTheEngine from "@/components/BehindTheEngine";
 import { CONTACT_EMAIL } from "@/lib/constants";
 import {
   ADDONS,
@@ -16,6 +17,7 @@ import {
   PLANS,
   PRICING_NOTES,
   PROCESS,
+  TEAM,
   TESTIMONIALS,
   WHY_US,
 } from "@/ab-tests/reddit-growth-management-v1/copy";
@@ -452,6 +454,9 @@ export default function ABRedditGrowthManagement() {
 
       {/* Why choose us */}
       <WhyChooseUs data={WHY_US} />
+
+      {/* Team */}
+      <BehindTheEngine people={TEAM} />
 
       {/* ROI calculator */}
       <section className="pb-14 sm:pb-20 lg:pb-24">

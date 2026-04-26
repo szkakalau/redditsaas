@@ -72,6 +72,7 @@ export default function ROICalculator({
                   value={ltv}
                   onChange={(e) => setLtv(e.target.value)}
                   inputMode="decimal"
+                  enterKeyHint="done"
                   className="mt-2 w-full bg-transparent text-base font-semibold text-[#0B0F19] outline-none sm:text-sm"
                   aria-label="Customer LTV in USD"
                 />
@@ -85,6 +86,7 @@ export default function ROICalculator({
                   value={closeRate}
                   onChange={(e) => setCloseRate(e.target.value)}
                   inputMode="decimal"
+                  enterKeyHint="done"
                   className="mt-2 w-full bg-transparent text-base font-semibold text-[#0B0F19] outline-none sm:text-sm"
                   aria-label="Lead to customer close rate percent"
                 />
@@ -98,6 +100,7 @@ export default function ROICalculator({
                   value={leadsMin}
                   onChange={(e) => setLeadsMin(e.target.value)}
                   inputMode="numeric"
+                  enterKeyHint="done"
                   className="mt-2 w-full bg-transparent text-base font-semibold text-[#0B0F19] outline-none sm:text-sm"
                   aria-label="Qualified leads per month minimum"
                 />
@@ -111,6 +114,7 @@ export default function ROICalculator({
                   value={leadsMax}
                   onChange={(e) => setLeadsMax(e.target.value)}
                   inputMode="numeric"
+                  enterKeyHint="done"
                   className="mt-2 w-full bg-transparent text-base font-semibold text-[#0B0F19] outline-none sm:text-sm"
                   aria-label="Qualified leads per month maximum"
                 />

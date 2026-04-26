@@ -1,4 +1,5 @@
 import Image from "next/image";
+import StrategyCallLink from "@/components/StrategyCallLink";
 
 const shots = [
   {
@@ -118,6 +119,26 @@ export default function CaseStudy() {
                 42,894 karma (3 months account age)
               </li>
             </ul>
+
+            <div className="mt-8 rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                Verify this case study
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                Links are available on the audit call (some clients prefer to stay private).
+              </p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <a
+                  href="#pricing"
+                  className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-4 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
+                >
+                  See plans
+                </a>
+                <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
+                  Book the audit call
+                </StrategyCallLink>
+              </div>
+            </div>
           </div>
 
           <div className="order-1 flex flex-col gap-6 lg:order-2 lg:gap-8">
