@@ -35,37 +35,37 @@ export default function TrustProcess({ data }: { data: TrustProcessData }) {
   return (
     <section className="py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-content px-5 sm:px-6">
-        <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
-          <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
-              {data.eyebrow}
-            </p>
-            <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-[#0B0F19] sm:text-3xl">
-              {data.title}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#6B7280]">{data.honesty}</p>
+        <div className="rounded-3xl border border-gray-200/80 bg-white/90 p-5 shadow-[0_26px_70px_-34px_rgba(15,23,42,0.35)] ring-1 ring-black/[0.04] backdrop-blur-sm sm:p-7">
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-start lg:gap-10">
+            <div className="lg:col-span-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                {data.eyebrow}
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight text-[#0B0F19] sm:text-3xl">
+                {data.title}
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-[#6B7280]">{data.honesty}</p>
 
-            <div className="mt-6 rounded-2xl border border-gray-200 bg-white/90 p-5 shadow-sm ring-1 ring-black/[0.03] backdrop-blur-sm">
-              <p className="text-sm font-semibold text-[#0B0F19]">Founder offer</p>
-              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">{data.founderOffer}</p>
-              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                  Email us
-                </StrategyCallLink>
-                <Link
-                  href="#pricing"
-                  className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-5 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
-                >
-                  See guarantee
-                </Link>
+              <div className="mt-6 rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
+                <p className="text-sm font-semibold text-[#0B0F19]">Founder offer</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">{data.founderOffer}</p>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                  <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-5 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
+                    Email us
+                  </StrategyCallLink>
+                  <Link
+                    href="#pricing"
+                    className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-5 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
+                  >
+                    See guarantee
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_24px_70px_-30px_rgba(15,23,42,0.28)] ring-1 ring-black/[0.03] sm:p-6">
+            <div className="lg:col-span-7">
               <div
-                className="pointer-events-none -mx-6 -mt-6 mb-5 h-px bg-gradient-to-r from-transparent via-[#6366F1]/40 to-transparent sm:-mx-6"
+                className="pointer-events-none -mx-7 -mt-7 mb-5 h-px bg-gradient-to-r from-transparent via-[#6366F1]/40 to-transparent"
                 aria-hidden
               />
               <div className="space-y-3">

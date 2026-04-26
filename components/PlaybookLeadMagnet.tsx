@@ -106,8 +106,8 @@ export default function PlaybookLeadMagnet({
   return (
     <section id={id} className={className}>
       <div className="rounded-3xl border border-gray-200/80 bg-white/90 p-5 shadow-[0_26px_70px_-34px_rgba(15,23,42,0.35)] ring-1 ring-black/[0.04] backdrop-blur-sm sm:p-7">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
+        <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-10">
+          <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
               {copy.eyebrow}
             </p>
@@ -136,7 +136,7 @@ export default function PlaybookLeadMagnet({
             ) : null}
           </div>
 
-          <div className="w-full max-w-xl">
+          <div className="w-full lg:col-span-5">
             {submitted ? (
               <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-5">
                 <p className="text-base font-semibold text-emerald-950">{copy.successTitle}</p>
@@ -145,7 +145,7 @@ export default function PlaybookLeadMagnet({
                 </p>
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="grid gap-3 sm:grid-cols-[1fr_auto]">
+              <form onSubmit={onSubmit} className="grid gap-3 sm:grid-cols-[1fr_auto] lg:grid-cols-1">
                 <div className="relative">
                   <label className="sr-only" htmlFor="playbook-email">
                     Email address

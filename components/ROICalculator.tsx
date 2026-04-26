@@ -16,7 +16,12 @@ function parseNumber(v: string) {
 function formatMoney(n: number) {
   if (!Number.isFinite(n)) return "$0";
   const rounded = Math.round(n);
-  return rounded.toLocaleString(undefined, { style: "currency", currency: "USD" });
+  // Use a fixed locale to avoid SSR/CSR hydration mismatches (e.g. "US$" vs "$").
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(rounded);
 }
 
 export default function ROICalculator({
@@ -50,8 +55,8 @@ export default function ROICalculator({
   return (
     <section className={className}>
       <div className="rounded-3xl border border-gray-200/80 bg-white/90 p-5 shadow-[0_26px_70px_-34px_rgba(15,23,42,0.35)] ring-1 ring-black/[0.04] backdrop-blur-sm sm:p-7">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-          <div className="max-w-2xl">
+        <div className="grid gap-6 lg:grid-cols-12 lg:items-start lg:gap-10">
+          <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
               ROI calculator
             </p>
@@ -127,7 +132,7 @@ export default function ROICalculator({
             </p>
           </div>
 
-          <div className="w-full max-w-xl">
+          <div className="w-full lg:col-span-5">
             <div className="rounded-2xl border border-gray-200 bg-gray-50/70 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6B7280]">
                 Estimated revenue range / month
