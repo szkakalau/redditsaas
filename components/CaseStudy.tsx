@@ -5,17 +5,15 @@ const shots = [
     src: "/screenshots/redditsaas_01.jpg",
     width: 785,
     height: 509,
-    alt: "Reddit SaaS case study — campaign overview and reach",
-    step: "01",
-    caption: "Reach & posting cadence — first 30 days",
+    alt: "Reddit SaaS case study — account trust metrics (karma, age, contributions)",
+    caption: "Trust foundation: 42,894 karma · 3 months age · 542 contributions",
   },
   {
     src: "/screenshots/redditsaas_02.jpg",
     width: 772,
     height: 704,
-    alt: "Reddit SaaS case study — engagement and conversion signals",
-    step: "02",
-    caption: "Engagement rolling up into pipeline signals",
+    alt: "Reddit SaaS case study — views and engagement metrics",
+    caption: "Performance: 256K views · 20K upvotes · 99.9% ratio · 250 comments",
   },
 ] as const;
 
@@ -35,25 +33,25 @@ export default function CaseStudy() {
               Case Study: AI SaaS
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-[#6B7280]">
-              Real numbers from a focused Reddit experiment — content, consistency,
-              and conversion in one lane.
+              Metrics pulled directly from the screenshots — trust signals and
+              performance from consistent, community-first execution.
             </p>
             <ul className="mt-8 space-y-4 text-base text-[#6B7280]">
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
-                30 days experiment
+                256K views
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
-                18 posts published
+                20K upvotes (99.9% upvote ratio)
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
-                120k+ total views
+                250 comments
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#6366F1]" />
-                First paying customers acquired
+                42,894 karma (3 months account age)
               </li>
             </ul>
           </div>
@@ -62,12 +60,6 @@ export default function CaseStudy() {
             {shots.map((shot, i) => (
               <figure key={shot.src} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-[0_22px_50px_-14px_rgba(15,23,42,0.18)] ring-1 ring-black/[0.04] transition duration-300 hover:border-[#6366F1]/25 hover:shadow-[0_28px_60px_-16px_rgba(99,102,241,0.22)]">
-                  <span
-                    className="absolute left-3 top-3 z-10 inline-flex h-9 min-w-[2.25rem] items-center justify-center rounded-full bg-[#0B0F19]/80 px-2.5 text-xs font-bold tabular-nums text-white shadow-md backdrop-blur-sm ring-1 ring-white/15 sm:left-4 sm:top-4"
-                    aria-hidden
-                  >
-                    {shot.step}
-                  </span>
                   <div
                     className="absolute inset-x-0 top-0 z-[1] h-px bg-gradient-to-r from-transparent via-[#6366F1]/35 to-transparent opacity-80"
                     aria-hidden
