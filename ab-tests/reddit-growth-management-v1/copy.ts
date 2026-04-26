@@ -289,7 +289,7 @@ export const TESTIMONIALS = [
   {
     name: "Maya Chen",
     title: "Founder",
-    company: "B2B Analytics SaaS",
+    company: "SaaS tools",
     quote:
       "We stopped guessing. Within the first month we had a repeatable posting loop, real conversations, and Reddit became a steady top-3 traffic source.",
     highlight: "3–6 weeks to first consistent signups",
@@ -297,7 +297,7 @@ export const TESTIMONIALS = [
   {
     name: "Ethan Patel",
     title: "Growth Lead",
-    company: "DevTool startup",
+    company: "Chrome extensions",
     quote:
       "The biggest win was safety. The content felt native, mods didn’t push back, and we finally had a way to scale engagement without sounding like marketing.",
     highlight: "Low removal rate with rule-first targeting",
@@ -305,7 +305,7 @@ export const TESTIMONIALS = [
   {
     name: "Sofia Alvarez",
     title: "Co-founder",
-    company: "AI product",
+    company: "AI products",
     quote:
       "They built real trust inside the right communities. We didn’t just get views — we got qualified clicks and people asking follow-up questions.",
     highlight: "Higher-intent traffic vs. broad social",
@@ -313,7 +313,7 @@ export const TESTIMONIALS = [
   {
     name: "Jordan Kim",
     title: "CEO",
-    company: "Chrome extension",
+    company: "Indie hackers",
     quote:
       "The process is simple: research, ship, learn. We saw what worked fast and doubled down without burning accounts or brand reputation.",
     highlight: "Weekly iteration loop, compounding results",
@@ -321,10 +321,18 @@ export const TESTIMONIALS = [
   {
     name: "Aisha Rahman",
     title: "Marketing",
-    company: "E-commerce brand",
+    company: "E-commerce brands",
     quote:
       "I liked that reporting was actionable. We could connect posts to traffic spikes and adjust product positioning based on comments.",
     highlight: "Clear reporting + message-market feedback",
+  },
+  {
+    name: "Noah Brooks",
+    title: "Head of Growth",
+    company: "Marketplaces",
+    quote:
+      "They didn’t chase vanity reach. We went straight to buyer conversations, learned objections fast, and turned Reddit into a reliable top-of-funnel source.",
+    highlight: "Faster learning loop + qualified pipeline",
   },
 ] as const;
 
