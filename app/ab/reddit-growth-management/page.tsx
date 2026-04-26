@@ -552,50 +552,86 @@ export default function ABRedditGrowthManagement() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div className="max-w-2xl">
+          <div className="relative mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#6366F1]/45 to-transparent"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#6366F1]/10 blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-[#0B0F19]/8 blur-3xl"
+              aria-hidden
+            />
+
+            <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
                   Our guarantee
                 </p>
                 <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
                   Risk-reversal, built in
                 </p>
-                <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50/70 p-4">
-                  <p className="text-sm font-semibold text-[#0B0F19]">Core terms (summary)</p>
-                  <div className="mt-4 space-y-4 text-sm text-[#0B0F19]">
-                    <div>
-                      <p className="font-semibold">30-day money-back</p>
-                      <ul className="mt-2 space-y-1 text-[#6B7280]">
-                        <li>• Cancel anytime in the first 30 days</li>
-                        <li>• Full refund, no questions asked</li>
-                        <li>• Excludes ad spend and third-party costs</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold">First post guarantee</p>
-                      <ul className="mt-2 space-y-1 text-[#6B7280]">
-                        <li>• Unhappy after the first post? We’ll revise or refund</li>
-                        <li>• Please share specific feedback within 7 days</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p className="font-semibold">Zero-ban protection</p>
-                      <ul className="mt-2 space-y-1 text-[#6B7280]">
-                        <li>• If an account is banned due to our ops, we cover recovery</li>
-                        <li>• + 1 month free service extension</li>
-                        <li>• Excludes violations of the agreed strategy</li>
-                      </ul>
-                    </div>
+                <p className="mt-3 text-sm leading-relaxed text-[#6B7280]">
+                  You’re buying execution on a sensitive platform. We keep the risk on us — and we
+                  keep the terms clear.
+                </p>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row lg:flex-col">
+                  <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
+                    Email us
+                  </StrategyCallLink>
+                  <a
+                    href="#playbook"
+                    className="inline-flex min-h-[48px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-6 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:bg-gray-50 hover:shadow-md active:scale-[0.99]"
+                  >
+                    Get the playbook
+                  </a>
+                </div>
+                <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
+                  Full terms available over email (~5 min read).
+                </p>
+              </div>
+
+              <div className="lg:col-span-8">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+                    <p className="text-sm font-semibold text-[#0B0F19]">30-day money-back</p>
+                    <ul className="mt-3 space-y-1.5 text-sm text-[#6B7280]">
+                      <li>• Cancel anytime in the first 30 days</li>
+                      <li>• Full refund, no questions asked</li>
+                      <li>• Excludes ad spend and third-party costs</li>
+                    </ul>
                   </div>
-                  <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                    Full terms available over email (~5 min read).
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+                    <p className="text-sm font-semibold text-[#0B0F19]">First post guarantee</p>
+                    <ul className="mt-3 space-y-1.5 text-sm text-[#6B7280]">
+                      <li>• Unhappy after the first post? We’ll revise or refund</li>
+                      <li>• Share specific feedback within 7 days</li>
+                      <li>• Clear expectations, written in email</li>
+                    </ul>
+                  </div>
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4 sm:col-span-2 lg:col-span-1">
+                    <p className="text-sm font-semibold text-[#0B0F19]">Zero-ban protection</p>
+                    <ul className="mt-3 space-y-1.5 text-sm text-[#6B7280]">
+                      <li>• If an account is banned due to our ops, we cover recovery</li>
+                      <li>• + 1 month free service extension</li>
+                      <li>• Excludes violations of the agreed strategy</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-4 rounded-2xl border border-gray-200 bg-white/70 p-4 shadow-sm ring-1 ring-black/[0.03]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6B7280]">
+                    Why this exists
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                    Guarantees are only meaningful when they’re specific. We keep them short and
+                    operational — so you know exactly what happens if you’re unhappy.
                   </p>
                 </div>
               </div>
-              <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                Email us
-              </StrategyCallLink>
             </div>
           </div>
 
