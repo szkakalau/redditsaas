@@ -285,6 +285,40 @@ export const EXEC_KIT = {
     "We’ll email the kit shortly. If you don’t see it, check Promotions/Spam or reply and we’ll resend.",
 } as const;
 
+export const TRUST_PROCESS = {
+  eyebrow: "Trust",
+  title: "Why trust this process?",
+  honesty:
+    "I can’t show client results yet (confidentiality + new service). But here’s what I can show:",
+  items: [
+    {
+      title: "My personal Reddit accounts",
+      description: "High-karma accounts that show long-term, native participation.",
+      links: [
+        { label: "Account #1", href: "https://reddit.com/user/" },
+        { label: "Account #2", href: "https://reddit.com/user/" },
+      ],
+    },
+    {
+      title: "Sample audit report (redacted)",
+      description: "A real deliverable format, with sensitive details removed.",
+      cta: { label: "View sample", href: "/ab/reddit-growth-management/resources/sample-audit" },
+    },
+    {
+      title: "Detailed methodology doc",
+      description: "Step-by-step: research → writing → engagement → iteration loop.",
+      cta: { label: "View methodology", href: "/ab/reddit-growth-management/resources/methodology" },
+    },
+    {
+      title: "30-day money-back guarantee",
+      description: "Core terms are public on this page. Full terms available over email.",
+      cta: { label: "See guarantee", href: "#pricing" },
+    },
+  ],
+  founderOffer:
+    "First 5 clients get 30% off in exchange for honest testimonials (shared only with your permission).",
+} as const;
+
 export const TESTIMONIALS = [
   {
     name: "Maya Chen",

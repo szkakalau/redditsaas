@@ -3,7 +3,7 @@ import StrategyCallLink from "@/components/StrategyCallLink";
 import CaseStudy from "@/components/CaseStudy";
 import PlaybookLeadMagnet from "@/components/PlaybookLeadMagnet";
 import ROICalculator from "@/components/ROICalculator";
-import SocialProof from "@/components/SocialProof";
+import TrustProcess from "@/components/TrustProcess";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import BehindTheEngine from "@/components/BehindTheEngine";
 import { CONTACT_EMAIL } from "@/lib/constants";
@@ -18,7 +18,7 @@ import {
   PRICING_NOTES,
   PROCESS,
   TEAM,
-  TESTIMONIALS,
+  TRUST_PROCESS,
   WHY_US,
 } from "@/ab-tests/reddit-growth-management-v1/copy";
 
@@ -503,8 +503,8 @@ export default function ABRedditGrowthManagement() {
       {/* Screenshot examples (reuse original homepage section) */}
       <CaseStudy />
 
-      {/* Social proof */}
-      <SocialProof items={TESTIMONIALS} />
+      {/* Trust (process-first) */}
+      <TrustProcess data={TRUST_PROCESS} />
 
       {/* Why choose us */}
       <WhyChooseUs data={WHY_US} />
