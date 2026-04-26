@@ -132,7 +132,7 @@ export default function ROICalculator({
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6B7280]">
                 Estimated revenue range / month
               </p>
-              <p className="mt-3 font-display text-3xl font-semibold tracking-tight text-[#0B0F19] sm:text-4xl">
+              <p className="mt-3 break-words font-display text-2xl font-semibold tracking-tight text-[#0B0F19] tabular-nums sm:text-4xl">
                 {formatMoney(model.minRevenue)} – {formatMoney(model.maxRevenue)}
               </p>
               <div className="mt-4 grid gap-2 text-sm text-[#6B7280]">

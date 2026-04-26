@@ -436,13 +436,47 @@ export default function ABRedditGrowthManagement() {
       {/* Executive kit */}
       <section className="pb-14 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-content px-5 sm:px-6">
-          <PlaybookLeadMagnet
-            id="exec-kit"
-            copy={EXEC_KIT}
-            source="exec-briefing-kit"
-            mailtoSubject="Executive Briefing Kit request — Reddit Growth Engine"
-            mailtoIntroLine="New Executive Briefing Kit request"
-          />
+          {/* Mobile: keep the page short (collapse the second form) */}
+          <details className="rounded-3xl border border-gray-200/80 bg-white/90 p-5 shadow-[0_26px_70px_-34px_rgba(15,23,42,0.35)] ring-1 ring-black/[0.04] backdrop-blur-sm md:hidden sm:p-7">
+            <summary className="cursor-pointer list-none">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    {EXEC_KIT.eyebrow}
+                  </p>
+                  <p className="mt-2 font-display text-xl font-semibold tracking-tight text-[#0B0F19]">
+                    {EXEC_KIT.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                    Need internal approval? Tap to get the kit.
+                  </p>
+                </div>
+                <span className="mt-1 rounded-full border border-gray-200 bg-gray-50/80 px-3 py-1 text-xs font-semibold text-[#0B0F19]">
+                  Open
+                </span>
+              </div>
+            </summary>
+            <div className="mt-5">
+              <PlaybookLeadMagnet
+                id="exec-kit"
+                copy={EXEC_KIT}
+                source="exec-briefing-kit"
+                mailtoSubject="Executive Briefing Kit request — Reddit Growth Engine"
+                mailtoIntroLine="New Executive Briefing Kit request"
+              />
+            </div>
+          </details>
+
+          {/* Desktop/tablet: show full section */}
+          <div className="hidden md:block">
+            <PlaybookLeadMagnet
+              id="exec-kit"
+              copy={EXEC_KIT}
+              source="exec-briefing-kit"
+              mailtoSubject="Executive Briefing Kit request — Reddit Growth Engine"
+              mailtoIntroLine="New Executive Briefing Kit request"
+            />
+          </div>
         </div>
       </section>
 
@@ -482,7 +516,7 @@ export default function ABRedditGrowthManagement() {
               30-day money-back guarantee* · Month-to-month · Community-first
             </p>
             <p className="mt-2 text-xs leading-relaxed text-[#6B7280]">
-              *Ask us on the call for details.
+              *Ask us over email for details.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold text-[#0B0F19] sm:text-base">
               {PRICING_NOTES.anchor}
@@ -530,8 +564,36 @@ export default function ABRedditGrowthManagement() {
             </div>
           </div>
 
+          {/* Expectations: visible on desktop, collapsible on mobile */}
           <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <details className="md:hidden">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                      Expectations
+                    </p>
+                    <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
+                      Sustainable growth beats short-term hacks
+                    </p>
+                  </div>
+                  <span className="mt-1 rounded-full border border-gray-200 bg-gray-50/80 px-3 py-1 text-xs font-semibold text-[#0B0F19]">
+                    Open
+                  </span>
+                </div>
+              </summary>
+              <div className="mt-4">
+                <p className="text-base leading-relaxed text-[#6B7280]">{PRICING_NOTES.expectation}</p>
+                <a
+                  href="#playbook"
+                  className="mt-4 inline-flex min-h-[48px] w-full items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-5 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:bg-gray-50 hover:shadow-md active:scale-[0.99]"
+                >
+                  Get the playbook
+                </a>
+              </div>
+            </details>
+
+            <div className="hidden md:flex md:flex-col md:gap-3 lg:flex-row lg:items-start lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
                   Expectations
