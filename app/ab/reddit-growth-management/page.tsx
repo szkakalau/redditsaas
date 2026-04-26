@@ -270,6 +270,11 @@ export default function ABRedditGrowthManagement() {
                 Case Study
               </a>
             </div>
+
+            <p className="mt-4 text-sm font-semibold text-[#0B0F19]">
+              We onboard 5–6 new clients/month to maintain quality.{" "}
+              <span className="text-[#6366F1]">3 spots remaining this month.</span>
+            </p>
           </div>
 
           <div className="relative">
@@ -477,12 +482,47 @@ export default function ABRedditGrowthManagement() {
             <p className="mx-auto mt-5 max-w-2xl text-sm font-semibold text-[#0B0F19] sm:text-base">
               {PRICING_NOTES.anchor}
             </p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-[#0B0F19]">
+              Current availability:{" "}
+              <span className="text-[#6366F1]">3 spots remaining this month.</span>
+            </p>
           </div>
 
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {PLANS.map((p) => (
               <PlanCard key={p.key} p={p} />
             ))}
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                  Our guarantee
+                </p>
+                <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
+                  Risk-reversal, built in
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {[
+                    "30-day money-back — not satisfied? Full refund.",
+                    "First post guarantee — unhappy after the first post? We’ll fix it fast.",
+                    "Zero-ban protection — if an account gets banned due to our ops, we’ll cover recovery + extend service.",
+                  ].map((b) => (
+                    <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
+                      <span className="leading-snug">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
+                  Full terms are reviewed on the audit call (takes ~5 minutes).
+                </p>
+              </div>
+              <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
+                Book the audit call
+              </StrategyCallLink>
+            </div>
           </div>
 
           <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
@@ -504,37 +544,6 @@ export default function ABRedditGrowthManagement() {
               >
                 Get the playbook
               </a>
-            </div>
-          </div>
-
-          <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 shadow-md sm:mt-12 sm:p-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
-                  Guarantees
-                </p>
-                <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
-                  Risk-reversal, built in
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {[
-                    "30-day money-back guarantee*",
-                    "First post guarantee (if you’re unhappy after the first post, we’ll make it right)",
-                    "Zero-ban protection (if an account gets banned due to our operations, we’ll help you recover and extend service)",
-                  ].map((b) => (
-                    <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
-                      <span className="leading-snug">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                  *Ask us on the call for details and eligibility.
-                </p>
-              </div>
-              <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                Book the audit call
-              </StrategyCallLink>
             </div>
           </div>
 

@@ -209,43 +209,43 @@ export const PROCESS = [
 export const FAQS = [
   {
     q: "Is this safe?",
-    a: "Yes. We use organic, community-first strategies.",
+    a: "Yes — we run a safety-first, human-led process. Every post is written to match native subreddit tone, checked against rules before publishing, and adjusted based on removals/mod feedback. We also warm up accounts before scaling volume.",
   },
   {
     q: "How long until results?",
-    a: "Usually 3–6 weeks for first traction.",
+    a: "Most teams see first traction in 3–6 weeks. That timeline depends on your market, offer, positioning, and how quickly we can iterate on what the community responds to.",
   },
   {
     q: "Do you guarantee traffic?",
-    a: "We guarantee consistent posting, engagement, and optimization.",
+    a: "We guarantee consistent execution — traffic depends on your market and offer. What we do guarantee: posting cadence by plan, daily engagement across target communities, and weekly iteration based on real performance data.",
   },
   {
     q: "How do you avoid getting flagged as ads?",
-    a: "We follow a community-first posting standard (value-first, soft CTA), check subreddit rules before every post, and match native tone. We optimize based on removals and mod feedback.",
+    a: "We write value-first posts with soft CTAs, match native tone, and never fight subreddit rules. We do pre-post rule checks, avoid promo-heavy formats, and iterate quickly when mods or users signal something feels off.",
   },
   {
     q: "What if my niche is very specific?",
-    a: "That’s normal. We build a portfolio of 5–15 niche communities where your buyers actually read, comment, and click. Smaller subs often convert better than the biggest ones.",
+    a: "That’s normal. We build a portfolio of 5–15 niche communities where your buyers actually read, comment, and click. Smaller subreddits often convert better than the biggest ones — and they’re safer to scale inside.",
   },
   {
     q: "What do you need from us?",
-    a: "A short product brief, positioning, and any key updates. We handle research, writing, posting, and daily engagement — you review direction and provide feedback as we iterate.",
+    a: "A short product brief, positioning, and any key updates. We handle research, writing, posting, and engagement — you approve direction early, then we run a tight loop and keep you in the know with reporting.",
   },
   {
     q: "Do you work on our existing account or create new ones?",
-    a: "Either. If you have an existing account, we’ll assess health and risk. If we create new accounts, we’ll run a warm-up process before scaling posting volume.",
+    a: "Either. If you have an existing account, we’ll assess health and risk. If we create new accounts, we warm them up first so we’re not scaling on day one with no trust signals.",
   },
   {
     q: "How do we measure ROI?",
-    a: "We track traffic and engagement. For signups and revenue, we recommend UTM links + a simple conversion setup so Reddit-driven actions are visible in your analytics.",
+    a: "We track traffic and engagement, and we help you set up attribution (UTMs + a simple conversion setup) so Reddit-driven signups and revenue are visible in your analytics — not just vanity metrics.",
   },
   {
     q: "What’s the minimum contract length?",
-    a: "We recommend 3 months because trust compounding takes time. But we work month-to-month — no long-term lock-in.",
+    a: "We recommend 3 months because trust compounding takes time, but we work month-to-month — no long-term lock-in.",
   },
   {
     q: "What if Reddit policies change?",
-    a: "Because our approach is human-led and rule-aware (not automation), we adapt quickly. We actively monitor platform and subreddit rule changes and adjust the playbook.",
+    a: "Because our approach is human-led and rule-aware (not automation), we adapt quickly. We monitor subreddit rule changes and adjust targeting, formats, and CTAs without relying on risky shortcuts.",
   },
 ] as const;
 
@@ -255,6 +255,12 @@ export const PLAYBOOK = {
   subtitle:
     "A concise, community-first checklist we use to reduce risk and find traction. Leave your email and we’ll send it over.",
   privacyNote: "No spam. One PDF. If it’s not helpful, ignore it.",
+  nextSteps: [
+    "Day 0: Playbook delivered to your inbox",
+    "Day 2: A case study deep-dive (how the loop works)",
+    "Day 5: Common mistakes guide (what to avoid)",
+    "Day 8: Invite to a free audit call",
+  ],
   cta: "Send me the playbook",
   successTitle: "Got it — check your inbox soon.",
   successSubtitle:
@@ -267,6 +273,12 @@ export const EXEC_KIT = {
   subtitle:
     "Need to pitch this internally? Get a concise PDF summary + ROI framing + risk notes you can forward to your CEO/CFO.",
   privacyNote: "One kit. No spam. If it’s not useful, ignore it.",
+  nextSteps: [
+    "Day 0: Executive summary PDF + templates",
+    "Day 2: ROI framing + examples for your team",
+    "Day 5: Risk + compliance notes (how we avoid bans)",
+    "Optional: reply with your product and we’ll suggest next steps",
+  ],
   cta: "Send me the kit",
   successTitle: "Sent — you’ll receive it by email.",
   successSubtitle:

@@ -8,6 +8,7 @@ type Copy = {
   title: string;
   subtitle: string;
   privacyNote: string;
+  nextSteps?: readonly string[];
   cta: string;
   successTitle: string;
   successSubtitle: string;
@@ -117,6 +118,22 @@ export default function PlaybookLeadMagnet({
               {copy.subtitle}
             </p>
             <p className="mt-3 text-sm font-medium text-[#6B7280]">{copy.privacyNote}</p>
+
+            {copy.nextSteps?.length ? (
+              <div className="mt-5 rounded-2xl border border-gray-100 bg-gray-50/70 px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6B7280]">
+                  What happens next
+                </p>
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#0B0F19]">
+                  {copy.nextSteps.map((s) => (
+                    <li key={s} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" aria-hidden />
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </div>
 
           <div className="w-full max-w-xl">
