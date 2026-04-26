@@ -273,6 +273,27 @@ export default function ABRedditGrowthManagement() {
               </a>
             </div>
 
+            <div className="mt-4 rounded-2xl border border-gray-200 bg-white/90 p-4 shadow-sm ring-1 ring-black/[0.03] backdrop-blur-sm">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm font-semibold text-[#0B0F19]">📧 Email-Only Service</p>
+                <div className="flex flex-wrap gap-2 text-xs font-semibold">
+                  <span className="rounded-full border border-gray-200 bg-gray-50/70 px-3 py-1 text-[#0B0F19]">
+                    Typical response time: &lt;2 hours
+                  </span>
+                  <span className="rounded-full border border-gray-200 bg-gray-50/70 px-3 py-1 text-[#0B0F19]">
+                    Audit delivery: 24 hours
+                  </span>
+                </div>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                We work asynchronously over email — no calls needed. This keeps costs lower and gives
+                you written records for internal sharing.
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-[#6B7280]">
+                Prefer a call? We can arrange one with an English-speaking strategist.
+              </p>
+            </div>
+
             <p className="mt-4 text-sm font-semibold text-[#0B0F19]">
               We onboard 5–6 new clients/month to maintain quality.
             </p>
