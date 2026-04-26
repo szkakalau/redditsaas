@@ -126,34 +126,56 @@ export default function CaseStudy() {
                 Verify this case study
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
-                We don’t publish raw links publicly by default (client privacy + subreddit policy
-                sensitivity). Over email, we can share a verification pack that includes:
+                Choose how you want to verify. We share what we can publicly, and keep sensitive links
+                private when clients prefer confidentiality.
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#0B0F19]">
-                {[
-                  "Direct links to the original Reddit posts",
-                  "Screenshot-to-link mapping for every metric shown",
-                  "The posting + engagement timeline we followed",
-                  "A redacted version if the client needs confidentiality",
-                ].map((b) => (
-                  <li key={b} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" aria-hidden />
-                    <span className="leading-snug">{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <a
-                  href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-                    "Verification pack request — Reddit Growth Engine"
-                  )}`}
-                  className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-gray-50/70 px-4 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
-                >
-                  Request verification pack
-                </a>
-                <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
-                  Email us
-                </StrategyCallLink>
+
+              <div className="mt-4 grid gap-3">
+                <details className="rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-3">
+                  <summary className="cursor-pointer list-none">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-sm font-semibold text-[#0B0F19]">Option 1: Instant (Public)</p>
+                        <p className="mt-1 text-sm text-[#6B7280]">
+                          Redacted evidence + methodology breakdown you can view now.
+                        </p>
+                      </div>
+                      <span className="mt-1 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-semibold text-[#0B0F19]">
+                        View now
+                      </span>
+                    </div>
+                  </summary>
+                  <div className="mt-4 space-y-3 text-sm text-[#0B0F19]">
+                    <ul className="space-y-2 text-[#6B7280]">
+                      <li>• Redacted screenshots with timestamps</li>
+                      <li>• Screenshot-to-metric mapping</li>
+                      <li>• Methodology + timeline summary</li>
+                    </ul>
+                    <p className="text-xs text-[#6B7280]">
+                      For direct links to original posts, use the private option below.
+                    </p>
+                  </div>
+                </details>
+
+                <div className="rounded-2xl border border-gray-200 bg-gray-50/60 px-4 py-3">
+                  <p className="text-sm font-semibold text-[#0B0F19]">Option 2: Full (Private)</p>
+                  <p className="mt-1 text-sm text-[#6B7280]">
+                    Direct links + full timeline + supporting docs (shared by email).
+                  </p>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+                        "Verification pack request — Reddit Growth Engine"
+                      )}`}
+                      className="inline-flex min-h-[44px] items-center justify-center rounded-2xl border border-gray-200 bg-white px-4 text-sm font-semibold text-[#0B0F19] shadow-sm transition hover:border-gray-300 hover:shadow-md active:scale-[0.99]"
+                    >
+                      Request via email
+                    </a>
+                    <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-[#0B0F19] px-4 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
+                      Email us
+                    </StrategyCallLink>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

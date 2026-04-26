@@ -274,8 +274,7 @@ export default function ABRedditGrowthManagement() {
             </div>
 
             <p className="mt-4 text-sm font-semibold text-[#0B0F19]">
-              We onboard 5–6 new clients/month to maintain quality.{" "}
-              <span className="text-[#6366F1]">3 spots remaining this month.</span>
+              We onboard 5–6 new clients/month to maintain quality.
             </p>
           </div>
 
@@ -522,8 +521,7 @@ export default function ABRedditGrowthManagement() {
               {PRICING_NOTES.anchor}
             </p>
             <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-[#0B0F19]">
-              Current availability:{" "}
-              <span className="text-[#6366F1]">3 spots remaining this month.</span>
+              We onboard 5–6 new clients/month to maintain quality.
             </p>
           </div>
 
@@ -542,21 +540,37 @@ export default function ABRedditGrowthManagement() {
                 <p className="mt-2 font-display text-xl font-semibold text-[#0B0F19]">
                   Risk-reversal, built in
                 </p>
-                <ul className="mt-4 space-y-2">
-                  {[
-                    "30-day money-back — not satisfied? Full refund.",
-                    "First post guarantee — unhappy after the first post? We’ll fix it fast.",
-                    "Zero-ban protection — if an account gets banned due to our ops, we’ll cover recovery + extend service.",
-                  ].map((b) => (
-                    <li key={b} className="flex gap-3 text-base text-[#0B0F19]">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6366F1]" />
-                      <span className="leading-snug">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                  Full terms are shared over email (takes ~5 minutes to read).
-                </p>
+                <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50/70 p-4">
+                  <p className="text-sm font-semibold text-[#0B0F19]">Core terms (summary)</p>
+                  <div className="mt-4 space-y-4 text-sm text-[#0B0F19]">
+                    <div>
+                      <p className="font-semibold">30-day money-back</p>
+                      <ul className="mt-2 space-y-1 text-[#6B7280]">
+                        <li>• Cancel anytime in the first 30 days</li>
+                        <li>• Full refund, no questions asked</li>
+                        <li>• Excludes ad spend and third-party costs</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-semibold">First post guarantee</p>
+                      <ul className="mt-2 space-y-1 text-[#6B7280]">
+                        <li>• Unhappy after the first post? We’ll revise or refund</li>
+                        <li>• Please share specific feedback within 7 days</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Zero-ban protection</p>
+                      <ul className="mt-2 space-y-1 text-[#6B7280]">
+                        <li>• If an account is banned due to our ops, we cover recovery</li>
+                        <li>• + 1 month free service extension</li>
+                        <li>• Excludes violations of the agreed strategy</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
+                    Full terms available over email (~5 min read).
+                  </p>
+                </div>
               </div>
               <StrategyCallLink className="inline-flex min-h-[48px] items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-sm font-semibold text-white shadow-md transition hover:shadow-lg active:scale-[0.99]">
                 Email us
