@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reddit Growth Engine — Landing
 
-## Getting Started
+单页落地站：Next.js 14（App Router）+ Tailwind CSS，用于 Reddit 投流；线索以 **邮件（mailto）** 为主，可选第三方表单，无后端。
 
-First, run the development server:
+## 本地开发
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+浏览器打开 [http://localhost:3000](http://localhost:3000)。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 构建
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 配置联系邮箱与表单
 
-To learn more about Next.js, take a look at the following resources:
+1. **邮箱**：编辑 [`lib/constants.ts`](lib/constants.ts) 里的默认 `contact@email.com`（`CONTACT_EMAIL`），或在本机 / Vercel 设置环境变量 `NEXT_PUBLIC_CONTACT_EMAIL`（会覆盖默认）。页脚与所有「Request audit」按钮共用该地址。
+2. **（可选）表单**：在 Formspree、Tally 等创建表单后，把公开提交 URL 设为 `NEXT_PUBLIC_FORM_URL`，Hero 区会多一个 **Prefer a form?** 链接。详见 [`.env.example`](.env.example)。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+审计请求通过 **mailto** 预填主题与正文；无需 Calendly。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 部署
 
-## Deploy on Vercel
+推荐 [Vercel](https://vercel.com) 导入本 GitHub 仓库，按下面设置：
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| 项 | 值 |
+|----|-----|
+| Framework Preset | **Next.js**（自动检测即可） |
+| Root Directory | **`.`**（留空或填 `./`，不要选子目录） |
+| Build Command | 默认 `next build` |
+| Output Directory | 留空（由 Next 插件处理） |
+| Install Command | 默认 `npm install`（仓库根目录须有 `package-lock.json`） |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+若构建失败：在 Vercel 项目 **Deployments → 失败那条 → Building** 里展开日志，查看红色报错（常见为 Root Directory 指错、或 Node 版本过旧）。本项目要求 **Node ≥ 18.17**（见 `package.json` 的 `engines`）。
+
+## 技术栈
+
+- Next.js 14、React 18、TypeScript、Tailwind CSS
+- 字体：Inter（[`@fontsource/inter`](https://fontsource.org/fonts/inter)）
