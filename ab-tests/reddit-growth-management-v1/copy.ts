@@ -289,7 +289,7 @@ export const TRUST_PROCESS = {
   eyebrow: "Trust",
   title: "Why trust this process?",
   honesty:
-    "I can’t show client results yet (confidentiality + new service). But here’s what I can show:",
+    "Building a public portfolio (safely + with permission). Here’s what I can show right now:",
   items: [
     {
       title: "My personal Reddit accounts",
@@ -316,7 +316,7 @@ export const TRUST_PROCESS = {
     },
   ],
   founderOffer:
-    "First 5 clients get 30% off in exchange for honest testimonials (shared only with your permission).",
+    "Building public portfolio · First 5 clients get 30% off in exchange for detailed case studies (shared only with your permission).",
 } as const;
 
 export const TESTIMONIALS = [

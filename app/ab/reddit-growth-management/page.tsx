@@ -248,7 +248,7 @@ export default function ABRedditGrowthManagement() {
                 Community-first
               </span>
               <span className="rounded-full border border-gray-200 bg-white px-3 py-1">
-                30+ startups served
+                Founding client program · 5 spots at 30% off
               </span>
             </div>
             <p className="mt-3 text-xs leading-relaxed text-[#6B7280]">
@@ -544,6 +544,70 @@ export default function ABRedditGrowthManagement() {
             <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-[#0B0F19]">
               We onboard 5–6 new clients/month to maintain quality.
             </p>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-4xl sm:mt-10">
+            <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-md ring-1 ring-black/[0.03] sm:p-6">
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#6366F1]/45 to-transparent"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute -left-20 -top-20 h-52 w-52 rounded-full bg-[#6366F1]/10 blur-3xl"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-[#0B0F19]/8 blur-3xl"
+                aria-hidden
+              />
+
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                <div className="max-w-xl">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6366F1]">
+                    🛡️ Our Guarantee — At a Glance
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                    Full terms below · Questions?{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+                        "Guarantee questions — Reddit Growth Engine"
+                      )}`}
+                      className="font-semibold text-[#0B0F19] underline decoration-gray-300 underline-offset-4 transition hover:decoration-gray-400"
+                    >
+                      Email us
+                    </a>
+                    .
+                  </p>
+                </div>
+
+                <div className="grid gap-3 sm:max-w-[34rem] sm:flex-1 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+                    <p className="text-sm font-semibold text-[#0B0F19]">
+                      ✓ 30-day money-back
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                      Full refund in the first 30 days.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+                    <p className="text-sm font-semibold text-[#0B0F19]">
+                      ✓ First post guarantee
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                      Revise or refund if unhappy.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-gray-200 bg-gray-50/60 p-4">
+                    <p className="text-sm font-semibold text-[#0B0F19]">
+                      ✓ Zero-ban protection
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
+                      We cover recovery + 1 month free.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
