@@ -45,6 +45,12 @@ export default function Navbar() {
           >
             Pricing
           </Link>
+          <Link
+            href="/cn"
+            className="text-sm font-semibold text-[#0B0F19] transition hover:text-[#111827]"
+          >
+            中文
+          </Link>
           <AuditLink
             className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl bg-[#6366F1] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition active:scale-[0.98] hover:bg-[#5558E3] hover:shadow-lg"
           >
@@ -108,6 +114,13 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               Pricing
+            </Link>
+            <Link
+              href="/cn"
+              className="flex min-h-[52px] items-center rounded-xl px-3 text-base font-semibold text-[#0B0F19] active:bg-gray-50"
+              onClick={() => setOpen(false)}
+            >
+              中文
             </Link>
             <AuditLink
               className="mt-4 flex min-h-[52px] items-center justify-center rounded-xl bg-[#6366F1] px-4 text-base font-semibold text-white shadow-lg active:scale-[0.99]"

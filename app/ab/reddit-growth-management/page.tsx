@@ -211,6 +211,12 @@ export default function ABRedditGrowthManagement() {
             >
               Process
             </a>
+            <Link
+              href="/cn"
+              className="text-sm font-semibold text-[#0B0F19] transition hover:text-[#111827]"
+            >
+              中文
+            </Link>
             <StrategyCallLink className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-[#0B0F19] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition active:scale-[0.98] hover:shadow-lg">
               Email us
             </StrategyCallLink>
