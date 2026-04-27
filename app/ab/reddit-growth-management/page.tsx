@@ -257,7 +257,7 @@ export default function ABRedditGrowthManagement() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <StrategyCallLink className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-2xl bg-[#0B0F19] px-6 text-center text-base font-semibold text-white shadow-lg transition active:scale-[0.99] hover:shadow-xl sm:min-h-[48px] sm:flex-initial sm:px-8">
-                Request a free async audit (email)
+                Get your free Reddit audit (24h turnaround)
               </StrategyCallLink>
               <a
                 href="#playbook"
@@ -542,7 +542,7 @@ export default function ABRedditGrowthManagement() {
               {PRICING_NOTES.anchor}
             </p>
             <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold text-[#0B0F19]">
-              We onboard 5–6 new clients/month to maintain quality.
+              We onboard 5–6 new clients/month · 3 spots remaining
             </p>
           </div>
 
@@ -654,7 +654,7 @@ export default function ABRedditGrowthManagement() {
                   </a>
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-[#6B7280]">
-                  Full terms available over email (~5 min read).
+                  Full terms available below · Email us for questions
                 </p>
               </div>
 
@@ -888,7 +888,7 @@ export default function ABRedditGrowthManagement() {
       <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
         <div className="border-t border-gray-200/90 bg-white/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-12px_40px_-8px_rgba(15,23,42,0.15)] backdrop-blur-md">
           <StrategyCallLink className="flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-[#0B0F19] text-center text-base font-semibold text-white shadow-md transition active:scale-[0.99]">
-            Email us for a free audit
+            Get your free Reddit audit (24h turnaround)
           </StrategyCallLink>
         </div>
       </div>

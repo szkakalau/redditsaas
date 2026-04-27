@@ -241,7 +241,7 @@ export const FAQS = [
   },
   {
     q: "What’s the minimum contract length?",
-    a: "We recommend 3 months because trust compounding takes time, but we work month-to-month — no long-term lock-in.",
+    a: "We recommend 3 months because trust compounding takes time, but we work month-to-month — no long-term lock-in. Cancel anytime after first month.",
   },
   {
     q: "What if Reddit policies change?",
@@ -445,7 +445,7 @@ export const TEAM = [
 
 export const PRICING_NOTES = {
   anchor:
-    "A single full-time Reddit operator often costs $6,000+/month. These plans give you consistent execution, without hiring.",
+    "Hiring a full-time Reddit operator: $6,000–8,000/month + benefits. Our team: From $899/month → Save 85%+.",
   expectation:
     "Reddit rewards trust. We optimize for sustainable growth — not short-term hacks. Typical first traction shows up in 3–6 weeks.",
 } as const;
